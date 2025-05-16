@@ -1,0 +1,93 @@
+/* Arabic-specific styles */
+@import url('../styles.css');
+
+/* RTL specific overrides */
+body {
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+    direction: rtl;
+}
+
+/* Header adjustments for RTL */
+header .container {
+    flex-direction: row-reverse;
+}
+
+nav ul {
+    padding-right: 0;
+}
+
+nav ul li {
+    margin-right: 30px;
+    margin-left: 0;
+}
+
+.menu-toggle {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* Language selector */
+.language-link {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--secondary-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.language-link:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Service cards */
+.service-card {
+    text-align: right;
+}
+
+.read-more::after {
+    content: '←';
+    margin-right: 5px;
+    margin-left: 0;
+}
+
+.read-more:hover::after {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+/* Footer adjustments */
+.footer-content {
+    text-align: right;
+}
+
+.footer-links h3::after,
+.footer-social h3::after {
+    right: 0;
+    left: auto;
+}
+
+/* Form elements */
+.form-group input,
+.form-group textarea {
+    text-align: right;
+}
+
+/* Mobile menu */
+@media (max-width: 992px) {
+    nav ul {
+        right: -100%;
+        left: auto;
+    }
+    
+    nav ul.active {
+        right: 0;
+        left: auto;
+    }
+}
