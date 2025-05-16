@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saudi Cloud Solutions SCS - حافظ على سحابتك</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../technologies.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Add Google Fonts for Arabic support -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -119,30 +120,62 @@
     <section id="technologies">
         <div class="container">
             <h2>التقنيات التي نعمل بها</h2>
-            <div class="tech-icons">
-                <div class="tech-icon" data-name="Docker">
-                    <i class="fab fa-docker"></i>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <h3 class="tech-name">Docker</h3>
+                    <p class="tech-description">منصة حاويات تمكن التطبيقات من العمل بشكل متسق عبر البيئات المختلفة.</p>
                 </div>
-                <div class="tech-icon" data-name="Ansible">
-                    <img src="../ansible.png" alt="Ansible" class="tech-img">
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper">
+                        <img src="../ansible.png" alt="Ansible" class="tech-img">
+                    </div>
+                    <h3 class="tech-name">Ansible</h3>
+                    <p class="tech-description">أداة أتمتة لإدارة التكوين ونشر التطبيقات وأتمتة المهام.</p>
                 </div>
-                <div class="tech-icon" data-name="Terraform">
-                    <img src="../terraform.png" alt="Terraform" class="tech-img">
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper">
+                        <img src="../terraform.png" alt="Terraform" class="tech-img">
+                    </div>
+                    <h3 class="tech-name">Terraform</h3>
+                    <p class="tech-description">أداة البنية التحتية كرمز لبناء وتغيير وإصدار البنية التحتية بأمان وكفاءة.</p>
                 </div>
-                <div class="tech-icon" data-name="AWS">
-                    <i class="fab fa-aws"></i>
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h3 class="tech-name">AWS</h3>
+                    <p class="tech-description">منصة سحابية رائدة توفر أكثر من 200 خدمة متكاملة من مراكز البيانات حول العالم.</p>
                 </div>
-                <div class="tech-icon" data-name="Azure">
-                    <i class="fab fa-microsoft"></i>
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h3 class="tech-name">Azure</h3>
+                    <p class="tech-description">خدمة الحوسبة السحابية من مايكروسوفت لبناء واختبار ونشر وإدارة التطبيقات.</p>
                 </div>
-                <div class="tech-icon" data-name="Google Cloud">
-                    <i class="fab fa-google"></i>
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3 class="tech-name">Google Cloud</h3>
+                    <p class="tech-description">مجموعة من خدمات الحوسبة السحابية التي تعمل على نفس البنية التحتية التي تستخدمها Google داخليًا.</p>
                 </div>
-                <div class="tech-icon" data-name="Alibaba Cloud">
-                    <img src="../alibaba.png" alt="Alibaba Cloud" class="tech-img">
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper">
+                        <img src="../alibaba.png" alt="Alibaba Cloud" class="tech-img">
+                    </div>
+                    <h3 class="tech-name">Alibaba Cloud</h3>
+                    <p class="tech-description">مجموعة شاملة من خدمات الحوسبة السحابية العالمية لتعزيز أعمالك.</p>
                 </div>
-                <div class="tech-icon" data-name="GitHub">
-                    <i class="fab fa-github"></i>
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3 class="tech-name">GitHub</h3>
+                    <p class="tech-description">منصة للتحكم في الإصدارات والتعاون في مشاريع تطوير البرمجيات.</p>
                 </div>
             </div>
         </div>
@@ -219,6 +252,6 @@
     </footer>
 
     <script src="../script.js"></script>
-    <script src="../tech-circles.js"></script>
+    <!-- Removed tech-circles.js as it's no longer needed with the new grid layout -->
 </body>
 </html>
