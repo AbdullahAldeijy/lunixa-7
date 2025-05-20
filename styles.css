@@ -1650,3 +1650,218 @@ html[dir="rtl"] .btn-subscribe {
 .footer-bottom-links a:hover {
     color: #d9b38c;
 }
+/* Who We Are Section */
+#who-we-are {
+    padding: 100px 0;
+    background-color: var(--light-color); /* match #services */
+    position: relative;
+    overflow: hidden;
+}
+
+#who-we-are::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, var(--accent-color), var(--primary-color), var(--accent-color));
+    opacity: 0.7;
+}
+
+#who-we-are h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--secondary-color);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#who-we-are h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+/* Card-style container with Services animation */
+.who-we-are-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.who-we-are-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--accent-color);
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+/* Hover animation like Services */
+.who-we-are-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.who-we-are-content:hover::before {
+    width: 100%;
+    opacity: 0.05;
+}
+
+.who-we-are-content p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .who-we-are-content {
+        padding: 30px;
+    }
+
+    #who-we-are h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .who-we-are-content {
+        padding: 25px;
+    }
+}
+
+
+/* Why Work With Us Section */
+#why-work-with-us {
+    padding: 100px 0;
+    background-color: var(--light-color);
+    position: relative;
+    overflow: hidden;
+}
+
+#why-work-with-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, var(--accent-color), var(--primary-color), var(--accent-color));
+    opacity: 0.7;
+}
+
+#why-work-with-us h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--secondary-color);
+    position: relative;
+    padding-bottom: 15px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#why-work-with-us h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+/* Grid and Cards */
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.why-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.why-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--accent-color);
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.why-card:hover::before {
+    width: 100%;
+    opacity: 0.05;
+}
+
+.why-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+    padding: 25px 25px 0;
+}
+
+.why-card p {
+    color: #666;
+    line-height: 1.6;
+    padding: 0 25px 25px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .why-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    #why-work-with-us h2 {
+        font-size: 2rem;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+}

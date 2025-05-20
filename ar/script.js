@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTechIcons();
     initSmoothScrolling();
     initCloudAnimation();
+    initContactForm();
 });
 
 // Initialize cloud animation
@@ -153,6 +154,36 @@ function initSmoothScrolling() {
             }
         });
     });
+}
+
+// Initialize contact form submission handling
+function initContactForm() {
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const formData = {
+                name: form.elements['name'].value,
+                email: form.elements['email'].value,
+                message: form.elements['message'].value
+            };
+            try {
+                const response = await fetch('/send-contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+                if (response.ok) {
+                    alert('تم إرسال الرسالة بنجاح!');
+                    form.reset();
+                } else {
+                    alert('فشل في إرسال الرسالة. يرجى المحاولة لاحقًا.');
+                }
+            } catch (error) {
+                alert('حدث خطأ. يرجى المحاولة مرة أخرى.');
+            }
+        });
+    }
 }
 
 // Add additional animation keyframes

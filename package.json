@@ -1,0 +1,29 @@
+{
+  "name": "scs",
+  "version": "1.0.0",
+  "description": "This repository contains the code for the Saudi Cloud Solutions (SCS) website, a fully responsive website that works across all device sizes.",
+  "main": "script.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfldosari/scs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mfldosari/scs/issues"
+  },
+  "homepage": "https://github.com/mfldosari/scs#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.3"
+  }
+}

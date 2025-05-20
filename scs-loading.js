@@ -48,13 +48,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Create cloud image with correct path
     const cloudImg = document.createElement('img');
-    cloudImg.src = pathPrefix + 'cloud.png';
+    cloudImg.src = pathPrefix + 'images/cloud.png';
     cloudImg.alt = 'Cloud';
     cloudImg.className = 'scs-cloud-img';
     
     // Create mountain image with correct path
     const mountainImg = document.createElement('img');
-    mountainImg.src = pathPrefix + 'koth.png';
+    mountainImg.src = pathPrefix + 'images/koth.png';
     mountainImg.alt = 'Mountains';
     mountainImg.className = 'scs-mountain-img';
     

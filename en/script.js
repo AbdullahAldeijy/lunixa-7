@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTechIcons();
     initSmoothScrolling();
     initCloudAnimation();
+    initContactForm();
 });
 
 // Initialize cloud animation
@@ -153,6 +154,70 @@ function initSmoothScrolling() {
             }
         });
     });
+}
+
+// Show notification function
+function showNotification(message, isSuccess = true) {
+    let notif = document.getElementById('contactNotification');
+    if (!notif) {
+        notif = document.createElement('div');
+        notif.id = 'contactNotification';
+        notif.style.position = 'fixed';
+        notif.style.bottom = '30px';
+        notif.style.left = '50%';
+        notif.style.transform = 'translateX(-50%)';
+        notif.style.background = isSuccess ? '#4BB543' : '#D8000C';
+        notif.style.color = '#fff';
+        notif.style.padding = '16px 32px';
+        notif.style.borderRadius = '8px';
+        notif.style.fontSize = '1.1em';
+        notif.style.zIndex = '9999';
+        notif.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
+        notif.style.transition = 'opacity 0.5s';
+        notif.style.opacity = '0';
+        document.body.appendChild(notif);
+    }
+    notif.textContent = message;
+    notif.style.display = 'block';
+    notif.style.opacity = '1';
+    setTimeout(() => {
+        notif.style.opacity = '0';
+        setTimeout(() => { notif.style.display = 'none'; }, 500);
+    }, 3500);
+}
+
+// Initialize contact form handling
+function initContactForm() {
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const submitBtn = form.querySelector('button[type="submit"]');
+            if (submitBtn) submitBtn.disabled = true;
+            const formData = {
+                name: form.elements['name'].value,
+                email: form.elements['email'].value,
+                message: form.elements['message'].value
+            };
+            try {
+                const response = await fetch('/send-contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+                if (response.ok) {
+                    showNotification('Your message has been sent!', true);
+                    form.reset();
+                } else {
+                    showNotification('Failed to send message. Please try again later.', false);
+                }
+            } catch (error) {
+                showNotification('An error occurred. Please try again.', false);
+            } finally {
+                if (submitBtn) submitBtn.disabled = false;
+            }
+        });
+    }
 }
 
 // Add additional animation keyframes

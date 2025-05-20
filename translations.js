@@ -6,6 +6,7 @@ const translations = {
         "nav_home": "Home",
         "nav_services": "Services",
         "nav_technologies": "Technologies",
+        "nav_who_we_are": "Who Are We",
         "nav_contact": "Contact",
         
         // Hero section
@@ -32,6 +33,13 @@ const translations = {
         // Technologies section
         "tech_title": "Technologies We Work With",
         
+        // Who We Are section
+        "who_we_are_title": "Who Are We",
+        "who_we_are_p1": "We are a team of passionate Saudi cloud engineers, united by a shared vision and a deep-rooted commitment to transforming the digital landscape of the Kingdom. As the founders of Saudi Cloud Solutions (SCS), we bring our expertise, creativity, and drive to deliver cutting-edge cloud services that empower organizations to achieve operational excellence.",
+        "who_we_are_p2": "Born out of a love for cloud technologies, infrastructure, and DevOps automation, SCS was founded to help companies transition smoothly and securely into the cloud era. We believe in more than just technical solutions — we believe in enabling sustainable digital transformation that aligns with our clients' goals and the future of our country.",
+        "who_we_are_p3": "Our mission is directly inspired by Saudi Arabia's Vision 2030, which calls for innovation, efficiency, and the advancement of local technology capabilities. By supporting companies on their cloud journey, we contribute to building a diversified, knowledge-based economy that leads the region in digital excellence.",
+        "who_we_are_p4": "At SCS, we don't just follow trends — we set them, shaping the future of cloud in the Kingdom and beyond.",
+        
         // Contact section
         "contact_title": "Get in Touch",
         "contact_name": "Name",
@@ -55,6 +63,7 @@ const translations = {
         "nav_home": "الرئيسية",
         "nav_services": "الخدمات",
         "nav_technologies": "التقنيات",
+        "nav_who_we_are": "من نحن",
         "nav_contact": "اتصل بنا",
         
         // Hero section
@@ -81,6 +90,13 @@ const translations = {
         // Technologies section
         "tech_title": "التقنيات التي نعمل بها",
         
+        // Who We Are section
+        "who_we_are_title": "من نحن",
+        "who_we_are_p1": "نحن فريق من مهندسي السحابة السعوديين المتحمسين، متحدين برؤية مشتركة والتزام عميق الجذور لتحويل المشهد الرقمي للمملكة. بصفتنا مؤسسي السعودية للحلول السحابية (SCS)، نجلب خبرتنا وإبداعنا وحماسنا لتقديم خدمات سحابية متطورة تمكّن المؤسسات من تحقيق التميز التشغيلي.",
+        "who_we_are_p2": "ولدت SCS من حب التقنيات السحابية والبنية التحتية وأتمتة DevOps، وتأسست لمساعدة الشركات على الانتقال بسلاسة وأمان إلى عصر السحابة. نحن نؤمن بأكثر من مجرد الحلول التقنية — نؤمن بتمكين التحول الرقمي المستدام الذي يتماشى مع أهداف عملائنا ومستقبل بلدنا.",
+        "who_we_are_p3": "مهمتنا مستوحاة مباشرة من رؤية المملكة العربية السعودية 2030، التي تدعو إلى الابتكار والكفاءة وتطوير القدرات التكنولوجية المحلية. من خلال دعم الشركات في رحلتها السحابية، نساهم في بناء اقتصاد متنوع قائم على المعرفة يقود المنطقة في التميز الرقمي.",
+        "who_we_are_p4": "في SCS، نحن لا نتبع الاتجاهات فحسب — بل نحددها، ونشكل مستقبل السحابة في المملكة وخارجها.",
+        
         // Contact section
         "contact_title": "تواصل معنا",
         "contact_name": "الاسم",
@@ -98,6 +114,9 @@ const translations = {
         "language": "English"
     }
 };
+
+// Export translations
+window.translations = translations;
 
 // Export translations
 window.translations = translations;
