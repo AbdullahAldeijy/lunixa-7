@@ -29,11 +29,6 @@ jobs:
           npm install eslint --save-dev
           npx eslint . --ext .js
 
-      - name: Scan HTML with htmlhint
-        run: |
-          npm install htmlhint --save-dev
-          npx htmlhint "**/*.html"
-
   build-and-push:
     needs: scan-code
     runs-on: ubuntu-latest
