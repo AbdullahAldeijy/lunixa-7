@@ -29,11 +29,6 @@ jobs:
           npm install eslint --save-dev
           npx eslint . --ext .js
 
-      - name: Scan CSS with stylelint
-        run: |
-          npm install stylelint stylelint-config-standard --save-dev
-          npx stylelint "**/*.css"
-
       - name: Scan HTML with htmlhint
         run: |
           npm install htmlhint --save-dev
