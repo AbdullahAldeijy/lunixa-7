@@ -93,7 +93,7 @@
         transform: translateX(-50%) translateY(0);
     }
     50% {
-        transform: translateX(-50%) translateY(15px); /* Moving down toward mountain */
+        transform: translateX(-50%) translateY(12px); /* Moving down toward mountain */
     }
     100% {
         transform: translateX(-50%) translateY(0);
@@ -106,7 +106,7 @@
         transform: translateX(-50%) translateY(0);
     }
     50% {
-        transform: translateX(-50%) translateY(-15px); /* Moving up toward cloud */
+        transform: translateX(-50%) translateY(-12px); /* Moving up toward cloud */
     }
     100% {
         transform: translateX(-50%) translateY(0);
