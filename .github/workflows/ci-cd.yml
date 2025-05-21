@@ -16,7 +16,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12' 
+          python-version: '3.12'
+
+      - name: Install Python linters
+        run: pip install flake8
+
+      - name: Lint Python code
+        run: flake8 . 
 
       - name: Scan JavaScript with ESLint
         run: |
