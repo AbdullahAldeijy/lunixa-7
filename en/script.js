@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initTechIcons();
     initSmoothScrolling();
     initCloudAnimation();
-    initContactForm();
 });
 
 // Initialize cloud animation
@@ -184,40 +183,6 @@ function showNotification(message, isSuccess = true) {
         notif.style.opacity = '0';
         setTimeout(() => { notif.style.display = 'none'; }, 500);
     }, 3500);
-}
-
-// Initialize contact form handling
-function initContactForm() {
-    const form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', async function (e) {
-            e.preventDefault();
-            const submitBtn = form.querySelector('button[type="submit"]');
-            if (submitBtn) submitBtn.disabled = true;
-            const formData = {
-                name: form.elements['name'].value,
-                email: form.elements['email'].value,
-                message: form.elements['message'].value
-            };
-            try {
-                const response = await fetch('/send-contact', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
-                if (response.ok) {
-                    showNotification('Your message has been sent!', true);
-                    form.reset();
-                } else {
-                    showNotification('Failed to send message. Please try again later.', false);
-                }
-            } catch (error) {
-                showNotification('An error occurred. Please try again.', false);
-            } finally {
-                if (submitBtn) submitBtn.disabled = false;
-            }
-        });
-    }
 }
 
 // Add additional animation keyframes
