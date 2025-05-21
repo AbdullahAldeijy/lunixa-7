@@ -57,4 +57,4 @@ jobs:
           ignore-unfixed: true
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/YOUR_IMAGE_NAME:latest
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/scs:latest
