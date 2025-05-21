@@ -58,3 +58,16 @@ jobs:
 
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/scs:latest
+
+      - name: Log in to Azure
+        uses: azure/login@v1
+        with:
+            creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Update Azure Web App Container Image
+        run: |
+          az webapp config container set \
+            --name ${{ secrets.WEBAPP_NAME }} \
+            --resource-group ${{ secrets.RESOURCE_GROUP }} \
+            --docker-custom-image-name ${{ secrets.DOCKERHUB_USERNAME }}/scs:latest \
+            --docker-registry-server-url https://index.docker.io
