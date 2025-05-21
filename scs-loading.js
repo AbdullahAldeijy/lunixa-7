@@ -79,8 +79,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Replace all link click handlers
     document.querySelectorAll('a').forEach(link => {
-        // Skip links that are just anchors
-        if (link.getAttribute('href') && link.getAttribute('href').startsWith('#')) {
+        const href = link.getAttribute('href');
+        // Skip links that are just anchors, or external, or mailto/tel
+        if (
+            (href && href.startsWith('#')) ||
+            (href && (href.startsWith('mailto:') || href.startsWith('tel:'))) ||
+            link.target === '_blank'
+        ) {
             return;
         }
         
