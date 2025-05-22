@@ -79,47 +79,39 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Replace all link click handlers
     document.querySelectorAll('a').forEach(link => {
-        const href = link.getAttribute('href');
-        // Skip links that are just anchors, or external, or mailto/tel
-        if (
-            (href && href.startsWith('#')) ||
-            (href && (href.startsWith('mailto:') || href.startsWith('tel:'))) ||
-            link.target === '_blank'
-        ) {
+        // Skip links that are just anchors
+        if (link.getAttribute('href') && link.getAttribute('href').startsWith('#')) {
             return;
         }
-        
+        // Skip external links (like LinkedIn)
+        if (link.classList.contains('external-link')) {
+            // Let the browser handle it normally (no loading overlay)
+            return;
+        }
         // Check if this is a language switcher link
         const isLanguageSwitcher = link.classList.contains('language-switcher') || 
                                   link.classList.contains('language-link') ||
                                   (link.getAttribute('href') && 
                                    (link.getAttribute('href').includes('/ar/') || 
                                     link.getAttribute('href').includes('/en/')));
-        
         // Store the original href
         const originalHref = link.getAttribute('href');
-        
         // Replace the link's onclick handler
         link.onclick = function(e) {
             e.preventDefault();
-            
             // For language switchers, set a flag to prevent double loading
             if (isLanguageSwitcher) {
                 sessionStorage.setItem('language-switch', 'true');
             }
-            
             // Set the navigating flag in localStorage
             localStorage.setItem('scs-navigating', 'true');
-            
             // Show the loading overlay
             loadingOverlay.style.display = 'flex';
             loadingOverlay.style.opacity = '1';
-            
             // Navigate after a short delay
             setTimeout(function() {
                 window.location.href = originalHref;
             }, 500);
-            
             return false;
         };
     });
