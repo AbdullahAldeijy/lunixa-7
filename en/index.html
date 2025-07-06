@@ -30,6 +30,60 @@
         .language-selector {
             margin-left: 20px;
         }
+        nav ul li a {
+            font-size: 0.95em !important;
+            padding: 8px 14px !important;
+        }
+        nav ul {
+            gap: 2px;
+        }
+        .providers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+            margin-top: 32px;
+        }
+        .provider-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            padding: 32px 24px 24px 24px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 260px;
+        }
+        .provider-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+        }
+        .provider-icon-wrapper {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            font-size: 2.7em;
+            color: #0072C6;
+        }
+        .provider-img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
+        .provider-name {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #222;
+        }
+        .provider-description {
+            font-size: 1em;
+            color: #555;
+        }
     </style>
 </head>
 <body>
@@ -58,7 +112,8 @@
                 <ul>
                     <li><a href="#home" class="home-link">Home</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#technologies">Technologies</a></li>
+                    <li><a href="#technologies">Technologies & Tools</a></li>
+                    <li><a href="#cloud-providers">Cloud Providers</a></li>
                     <li><a href="#who-we-are">Who Are We</a></li>
                     <li><a href="#why-work-with-us">Why Work With Us</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -117,7 +172,7 @@
 
     <section id="technologies">
         <div class="container">
-            <h2>Technologies We Work With</h2>
+            <h2>Technologies & Tools We Work With</h2>
             <div class="tech-grid">
                 <div class="tech-card">
                     <div class="tech-icon-wrapper">
@@ -140,6 +195,21 @@
                     <h3 class="tech-name">Terraform</h3>
                     <p class="tech-description">Infrastructure as Code tool for building, changing, and versioning infrastructure safely and efficiently.</p>
                 </div>
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3 class="tech-name">GitHub</h3>
+                    <p class="tech-description">Platform for version control and collaboration for software development projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-divider"></div>
+    <section id="cloud-providers">
+        <div class="container">
+            <h2 class="section-title">Cloud Providers We Work With</h2>
+            <div class="tech-grid">
                 <div class="tech-card">
                     <div class="tech-icon-wrapper">
                         <i class="fab fa-aws"></i>
@@ -168,17 +238,10 @@
                     <h3 class="tech-name">Alibaba Cloud</h3>
                     <p class="tech-description">Comprehensive suite of global cloud computing services to power your business.</p>
                 </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <h3 class="tech-name">GitHub</h3>
-                    <p class="tech-description">Platform for version control and collaboration for software development projects.</p>
-                </div>
             </div>
         </div>
     </section>
-
+    
     <section id="who-we-are">
         <div class="container">
             <h2>Who Are We</h2>
@@ -294,7 +357,8 @@
                     <ul>
                         <li><a href="#hero">Home</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#technologies">Technologies</a></li>
+                        <li><a href="#technologies">Technologies & Tools</a></li>
+                        <li><a href="#cloud-providers">Cloud Providers</a></li>
                         <li><a href="#who-we-are">Who Are We</a></li>
                         <li><a href="#why-work-with-us">Why Work With Us</a></li>
                         <li><a href="#contact">Contact</a></li>
