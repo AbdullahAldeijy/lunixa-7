@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lunixa Cloud Solutions SCS - Keep it clouded</title>
+    <title>Lunixa Cloud Solutions LCS - Keep it clouded</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../technologies.css">
     <link rel="stylesheet" href="../responsive.css">
@@ -35,8 +35,8 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo-container">
-                <img src="../images/logo2.png" alt="SCS Logo" class="logo-img">
+            <div class="logo-container" id="logo-container" style="cursor:pointer;">
+                <img src="../images/logo2.png" alt="Lunixa Cloud Solutions Logo" class="logo-img">
                 <div class="header-content">
                     <div class="company-names">
                         <div class="company-name">
@@ -44,19 +44,19 @@
                             <span>Cloud</span>
                             <span>Solutions</span>
                         </div>
-                        <div class="company-name">
+                        <div class="company-name arabic">
                             <span>لونيكسا</span>
                             <span>للحلول</span>
                             <span>السحابية</span>
                         </div>
                     </div>
-                    <div class="vertical-divider"></div>
-                    <img src="../images/vision2030-w.svg" alt="Vision 2030" class="vision2030">
                 </div>
+                <div class="vertical-divider"></div>
+                <img src="../images/vision2030-w.svg" alt="Vision 2030" class="vision2030">
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#home" class="home-link">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#technologies">Technologies</a></li>
                     <li><a href="#who-we-are">Who Are We</a></li>
@@ -319,7 +319,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Saudi Cloud Solutions. All rights reserved.</p>
+                <p>&copy; 2025 Lunixa Cloud Solutions. All rights reserved.</p>
                 <div class="footer-bottom-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -331,5 +331,19 @@
 
     <script src="../script.js"></script>
     <!-- Removed tech-circles.js as it's no longer needed with the new grid layout -->
+    <script>
+document.querySelectorAll('.home-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+const logoContainer = document.getElementById('logo-container');
+if (logoContainer) {
+    logoContainer.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+</script>
 </body>
 </html>
