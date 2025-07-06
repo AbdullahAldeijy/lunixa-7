@@ -208,6 +208,7 @@ function initSmoothScrolling() {
         });
     });
 }
+
 // Initialize contact form animations
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
@@ -255,4 +256,40 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1500);
         });
     }
+});
+
+// Show loading overlay for first-time visitors
+function showInitialLoadingIfFirstVisit() {
+  var isFirstVisit = !localStorage.getItem('spa-visited');
+  if (isFirstVisit) {
+    // Hide body content
+    document.body.style.visibility = 'hidden';
+    // Create overlay
+    var overlay = document.createElement('div');
+    overlay.id = 'spa-loading-overlay';
+    overlay.style.position = 'fixed';
+    overlay.style.top = 0;
+    overlay.style.left = 0;
+    overlay.style.right = 0;
+    overlay.style.bottom = 0;
+    overlay.style.background = '#fff';
+    overlay.style.zIndex = 9999;
+    overlay.style.display = 'flex';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
+    overlay.style.fontSize = '2em';
+    overlay.style.color = '#0072C6';
+    overlay.innerHTML = '<div><img src="images/logo2.png" alt="Lunixa Logo" style="width:100px;display:block;margin:0 auto 20px auto;"><div style="text-align:center;">Loading...</div></div>';
+    document.body.appendChild(overlay);
+    setTimeout(function() {
+      document.body.style.visibility = '';
+      overlay.style.opacity = '0';
+      setTimeout(function() { overlay.remove(); }, 500);
+      localStorage.setItem('spa-visited', 'true');
+    }, 3000);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  showInitialLoadingIfFirstVisit();
 });
