@@ -17,12 +17,12 @@ This document explains how the main HTML files and assets are linked together in
 
 Both HTML files link to the same shared CSS and JS files (relative to their own location):
 
-- `../styles.css` — Main global styles for layout, sections, and components.
-- `../technologies.css` — Styles for technology/tool and cloud provider grids/cards.
-- `../responsive.css` — Responsive/adaptive styles for mobile and tablet.
-- `../scs-loading.css` — Styles for the loading animation overlay.
-- `../script.js` — Main JavaScript for interactivity and navigation.
-- `../scs-loading.js` — JavaScript for the loading animation overlay.
+- `../css/styles.css` — Main global styles for layout, sections, and components.
+- `../css/technologies.css` — Styles for technology/tool and cloud provider grids/cards.
+- `../css/responsive.css` — Responsive/adaptive styles for mobile and tablet.
+- `../css/scs-loading.css` — Styles for the loading animation overlay.
+- `../js/script.js` — Main JavaScript for interactivity and navigation.
+- `../js/scs-loading.js` — JavaScript for the loading animation overlay.
 - Font Awesome CDN — For icon fonts (cloud, tech, provider icons, etc).
 
 ---
@@ -63,12 +63,12 @@ Each HTML file contains the same main sections (with translated content):
 |-------------------------|------------------------------------------------------|
 | en/index.html           | English homepage, links to shared CSS/JS/assets      |
 | ar/index.html           | Arabic homepage, links to shared CSS/JS/assets       |
-| ../styles.css           | Main global styles (sections, layout, colors, etc)   |
-| ../technologies.css     | Styles for tech/tool and provider grids/cards        |
-| ../responsive.css       | Responsive styles for all sections                   |
-| ../scs-loading.css      | Loading animation overlay styles                     |
-| ../script.js            | Main JS for navigation and interactivity             |
-| ../scs-loading.js       | JS for loading animation overlay                     |
+| ../css/styles.css       | Main global styles (sections, layout, colors, etc)   |
+| ../css/technologies.css | Styles for tech/tool and provider grids/cards        |
+| ../css/responsive.css   | Responsive styles for all sections                   |
+| ../css/scs-loading.css  | Loading animation overlay styles                     |
+| ../js/script.js         | Main JS for navigation and interactivity             |
+| ../js/scs-loading.js    | JS for loading animation overlay                     |
 | ../images/              | Shared images (logos, icons, etc)                    |
 
 ---
