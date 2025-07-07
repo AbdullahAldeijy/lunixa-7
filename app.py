@@ -23,31 +23,38 @@ def serve_ar_index():
     return send_from_directory('ar', 'index.html')
 
 
-# Serve static files for English
+
+# Serve static files for English, redirect to error if not found
 @app.route('/en/<path:path>')
 def serve_en_file(path):
     full_path = os.path.join('en', path)
     if os.path.isfile(full_path):
         return send_from_directory('en', path)
-    return 'File not found', 404
+    return redirect('/error/error.html')
 
 
-# Serve static files for Arabic
+
+# Serve static files for Arabic, redirect to error if not found
 @app.route('/ar/<path:path>')
 def serve_ar_file(path):
     full_path = os.path.join('ar', path)
     if os.path.isfile(full_path):
         return send_from_directory('ar', path)
-    return 'File not found', 404
+    return redirect('/error/error.html')
+
 
 
 # Optional: serve global static assets (e.g., favicon, shared css/js)
 @app.route('/<path:filename>')
 def serve_global_static(filename):
     allowed_ext = ('.css', '.js', '.png', '.jpg', '.jpeg', '.svg', '.ico')
+    # Allow direct serving of the error page
+    if filename == 'error/error.html' and os.path.isfile(filename):
+        return send_from_directory('.', filename)
     if filename.endswith(allowed_ext) and os.path.isfile(filename):
         return send_from_directory('.', filename)
-    return 'File not found', 404
+    # If not a static asset and not /en or /ar, show error page
+    return redirect('/error/error.html')
 
 
 if __name__ == '__main__':
