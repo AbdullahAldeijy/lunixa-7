@@ -44,16 +44,27 @@ def serve_ar_file(path):
 
 
 
-# Optional: serve global static assets (e.g., favicon, shared css/js)
+
+# Strict error handling: only allow /en, /ar, and static assets
 @app.route('/<path:filename>')
 def serve_global_static(filename):
     allowed_ext = ('.css', '.js', '.png', '.jpg', '.jpeg', '.svg', '.ico')
     # Allow direct serving of the error page
     if filename == 'error/error.html' and os.path.isfile(filename):
         return send_from_directory('.', filename)
+    # Only allow static assets if the request is from /en or /ar or error page
     if filename.endswith(allowed_ext) and os.path.isfile(filename):
-        return send_from_directory('.', filename)
-    # If not a static asset and not /en or /ar, show error page
+        # Only allow if the referer is from /en, /ar, or error page
+        from flask import request
+        referer = request.headers.get('Referer', '')
+        if referer.endswith('/en') or referer.endswith('/ar') or '/error/' in referer:
+            return send_from_directory('.', filename)
+        # Otherwise, block direct access
+        return redirect('/error/error.html')
+    # Block any URL manipulation or operations except /en or /ar
+    if not (filename.startswith('en') or filename.startswith('ar')):
+        return redirect('/error/error.html')
+    # If /en or /ar but file not found, also show error
     return redirect('/error/error.html')
 
 
