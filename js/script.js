@@ -80,20 +80,17 @@ function initStickyHeader() {
 
 // Mobile Menu Toggle
 function initMobileMenu() {
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        menuToggle.querySelector('i').classList.toggle('fa-bars');
-        menuToggle.querySelector('i').classList.toggle('fa-times');
-    });
-
-    // Close mobile menu when clicking on a nav link
-    document.querySelectorAll('nav ul li a').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            menuToggle.querySelector('i').classList.add('fa-bars');
-            menuToggle.querySelector('i').classList.remove('fa-times');
-        });
-    });
+    // Always hide the hamburger menu on mobile
+    function hideMenuToggleOnMobile() {
+        if (window.innerWidth <= 900) {
+            menuToggle.style.display = 'none';
+        } else {
+            menuToggle.style.display = '';
+        }
+    }
+    hideMenuToggleOnMobile();
+    window.addEventListener('resize', hideMenuToggleOnMobile);
+    // No click handler needed since the menu toggle is hidden on mobile
 }
 
 // Create particles for logo background
