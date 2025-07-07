@@ -399,11 +399,6 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Lunixa Cloud Solutions. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Sitemap</a>
-                </div>
             </div>
         </div>
     </footer>
@@ -423,6 +418,12 @@ if (logoContainer) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
+// On page load, if path is /en or /ar (no hash), scroll to top/home section
+document.addEventListener('DOMContentLoaded', function() {
+    if ((window.location.pathname.endsWith('/en') || window.location.pathname.endsWith('/ar')) && !window.location.hash) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+});
 </script>
 </body>
 </html>
