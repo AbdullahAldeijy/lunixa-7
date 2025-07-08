@@ -26,7 +26,37 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: left;
         }
-        
+        /* Spinner for image loading */
+        .img-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .img-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #0072C6;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg);}
+            100% { transform: rotate(360deg);}
+        }
+        /* Hide spinner when image is loaded */
+        .img-loaded + .img-spinner {
+            display: none !important;
+        }
         .language-selector {
             margin-left: 20px;
         }
@@ -94,6 +124,22 @@
         .provider-description {
             font-size: 1em;
             color: #555;
+        }
+        /* Center tech images in Technologies & Tools section */
+        .tech-icon-wrapper {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px auto;
+        }
+        .tech-img {
+            display: block;
+            margin: 0 auto;
+            max-width: 48px;
+            max-height: 48px;
+            object-fit: contain;
         }
     </style>
 </head>
@@ -423,6 +469,40 @@ document.addEventListener('DOMContentLoaded', function() {
     if ((window.location.pathname.endsWith('/en') || window.location.pathname.endsWith('/ar')) && !window.location.hash) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+});
+// Spinner for all images (including PNGs)
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('img').forEach(function(img) {
+        // Skip if already wrapped
+        if (img.parentElement && img.parentElement.classList.contains('img-wrapper')) return;
+        // Create wrapper
+        var wrapper = document.createElement('div');
+        wrapper.className = 'img-wrapper';
+        img.parentNode.insertBefore(wrapper, img);
+        wrapper.appendChild(img);
+        // Create spinner
+        var spinner = document.createElement('div');
+        spinner.className = 'img-spinner';
+        spinner.innerHTML = '<div class="spinner"></div>';
+        wrapper.appendChild(spinner);
+        // Show spinner by default
+        spinner.style.display = 'flex';
+        // Hide spinner on load
+        img.addEventListener('load', function() {
+            img.classList.add('img-loaded');
+            spinner.style.display = 'none';
+        });
+        // Show error icon on error
+        img.addEventListener('error', function() {
+            spinner.innerHTML = '<span style="color:red;font-size:1.5em;">&#9888;</span>';
+            spinner.style.display = 'flex';
+        });
+        // If already loaded (from cache)
+        if (img.complete && img.naturalWidth !== 0) {
+            img.classList.add('img-loaded');
+            spinner.style.display = 'none';
+        }
+    });
 });
 </script>
 </body>
