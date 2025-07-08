@@ -1016,19 +1016,11 @@ html[dir="rtl"] .footer-social h3::after {
     }
 }
 
+
 @media (max-width: 768px) {
     .tech-icons {
         height: 600px;
     }
-}
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--secondary-color);
-    opacity: 0;
-    transition: all 0.3s ease;
 }
 
 .tech-icon:hover {
