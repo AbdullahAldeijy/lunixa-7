@@ -18,6 +18,38 @@
             document.documentElement.style.visibility = 'visible';
             sessionStorage.removeItem('language-switch');
         }
+
+    
+        // Add additional circles and floating effect
+        // Use requestAnimationFrame for ultra-smooth floating animation
+        function startSmoothFloat() {
+            const cloud = document.getElementById('cloud-img');
+            const koth = document.getElementById('koth-img');
+            if (!cloud || !koth) return;
+            let start = null;
+            // Offset values to move images further up (smaller/more negative = higher)
+            const cloudBaseOffset = -60; // adjust this value to move cloud up or down
+            const kothBaseOffset = -75;  // adjust this value to move koth up or down
+            function animate(ts) {
+                if (!start) start = ts;
+                const elapsed = (ts - start) / 1000;
+                // Cloud floats up and down
+                const cloudY = Math.sin(elapsed * 2 * Math.PI / 3.5) * 5;
+                cloud.style.transform = `translateX(-50%) translateY(${cloudBaseOffset + cloudY}px)`;
+                // Koth floats with a phase offset
+                const kothY = Math.sin((elapsed + 0.5) * 2 * Math.PI / 4.5) * 2;
+                koth.style.transform = `translateX(-50%) translateY(${kothBaseOffset + kothY}px)`;
+                requestAnimationFrame(animate);
+            }
+            requestAnimationFrame(animate);
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            startSmoothFloat();
+            // Loop the animation forever (overlay always visible)
+            document.getElementById('scs-loading-overlay').style.display = 'flex';
+        });
+        // getFloatOffset is no longer needed
+    
     </script>
     <!-- <script src="../js/scs-loading.js"></script> -->
     <style>
@@ -184,7 +216,7 @@
             </div>
         </div>
     </header>
-
+    <!-- Loading overlay and related functionality removed -->
     <section id="hero">
         <div class="container">
             <div class="hero-content">
@@ -194,7 +226,6 @@
             </div>
         </div>
     </section>
-
     <section id="services">
         <div class="container">
             <h2>Our Services</h2>
@@ -435,13 +466,15 @@
                 </div>
                 <div class="footer-social">
                     <h3>Connect With Us</h3>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/company/saudicloudsolutions" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="external-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-x"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <div class="footer-social">
+                        <h3>تواصل معنا</h3>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/company/lunixacloud" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="external-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-x"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
-                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Lunixa Cloud Solutions. All rights reserved.</p>
@@ -452,6 +485,10 @@
     <script src="../js/script.js"></script>
     <!-- Removed tech-circles.js as it's no longer needed with the new grid layout -->
     <script>
+// --- Loading overlay for new users only ---
+// Loading overlay and related functionality removed
+
+// ...existing code...
 document.querySelectorAll('.home-link').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -494,7 +531,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         // Show error icon on error
         img.addEventListener('error', function() {
-            spinner.innerHTML = '<span style="color:red;font-size:1.5em;">&#9888;</span>';
+            spinner.innerHTML = '<span style="color:red;font-size:1.5em;">⚠</span>';
             spinner.style.display = 'flex';
         });
         // If already loaded (from cache)
@@ -504,6 +541,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-</script>
+    </script>
 </body>
 </html>

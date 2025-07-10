@@ -382,7 +382,7 @@
                 <div class="footer-social">
                     <h3>تواصل معنا</h3>
                     <div class="social-icons">
-                        <a href="https://www.linkedin.com/company/saudicloudsolutions" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="external-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/company/lunixacloud" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="external-link"><i class="fab fa-linkedin"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-x"></i></a>
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -395,61 +395,9 @@
         </div>
     </footer>
 
-    <script src="../js/script.js"></script>
-    <!-- Removed tech-circles.js as it's no longer needed with the new grid layout -->
-    <script>
-document.querySelectorAll('.home-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-});
-const logoContainer = document.getElementById('logo-container');
-if (logoContainer) {
-    logoContainer.addEventListener('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-}
-// On page load, if path is /en or /ar (no hash), scroll to top/home section
-document.addEventListener('DOMContentLoaded', function() {
-    if ((window.location.pathname.endsWith('/en') || window.location.pathname.endsWith('/ar')) && !window.location.hash) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-});
-    // Spinner for all images (including PNGs)
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('img').forEach(function(img) {
-            // Skip if already wrapped
-            if (img.parentElement && img.parentElement.classList.contains('img-wrapper')) return;
-            // Create wrapper
-            var wrapper = document.createElement('div');
-            wrapper.className = 'img-wrapper';
-            img.parentNode.insertBefore(wrapper, img);
-            wrapper.appendChild(img);
-            // Create spinner
-            var spinner = document.createElement('div');
-            spinner.className = 'img-spinner';
-            spinner.innerHTML = '<div class="spinner"></div>';
-            wrapper.appendChild(spinner);
-            // Show spinner by default
-            spinner.style.display = 'flex';
-            // Hide spinner on load
-            img.addEventListener('load', function() {
-                img.classList.add('img-loaded');
-                spinner.style.display = 'none';
-            });
-            // Show error icon on error
-            img.addEventListener('error', function() {
-                spinner.innerHTML = '<span style="color:red;font-size:1.5em;">&#9888;</span>';
-                spinner.style.display = 'flex';
-            });
-            // If already loaded (from cache)
-            if (img.complete && img.naturalWidth !== 0) {
-                img.classList.add('img-loaded');
-                spinner.style.display = 'none';
-            }
-        });
-    });
+    <!-- SCS Loading Overlay (Arabic, same as EN version) -->
+    <!-- Loading overlay and related functionality removed -->
+
 </script>
 </body>
 </html>
