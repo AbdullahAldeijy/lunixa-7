@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/technologies.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/modern-tech.css">
     <!-- <link rel="stylesheet" href="../css/scs-loading.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script>
@@ -179,7 +180,7 @@
     <header>
         <div class="container">
             <div class="logo-container" id="logo-container" style="cursor:pointer;">
-                <img src="../images/logo2.png" alt="Lunixa Cloud Solutions Logo" class="logo-img">
+                <img src="../images/logo6.png" alt="Lunixa Cloud Solutions Logo" class="logo-img">
                 <div class="header-content">
                     <div class="company-names">
                         <div class="company-name">
@@ -201,8 +202,7 @@
                 <ul>
                     <li><a href="#home" class="home-link">Home</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#technologies">Tools</a></li>
-                    <li><a href="#cloud-providers">Cloud Providers</a></li>
+                    <li><a href="#technologies">Our Partners</a></li>
                     <li><a href="#who-we-are">Who Are We</a></li>
                     <li><a href="#why-work-with-us">Why Us</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -222,130 +222,176 @@
             <div class="hero-content">
                 <h1>Keep it clouded</h1>
                 <p>Transforming businesses through innovative cloud solutions</p>
-                <a href="#services" class="btn">Explore Our Services</a>
+                <a href="#services" class="btn modern-btn pulse-effect">Explore Our Services</a>
             </div>
         </div>
     </section>
     <section id="services">
         <div class="container">
             <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Infrastructure as Code</h3>
-                    <p>Automate your infrastructure deployment and management with our IaC solutions, ensuring consistency and reliability across your environments.</p>
+            
+            <div class="service-category">
+                <h3 class="category-title">Professional Services</h3>
+                <div class="services-grid">
+                    <div class="service-card expandable" onclick="toggleService(this)">
+                        <h4>Cloud Migration <i class="fas fa-chevron-down"></i></h4>
+                        <div class="service-details">
+                            <ul>
+                                <li>Cloud Migration Assessment</li>
+                                <li>Migration Business Case</li>
+                                <li>Migration Planning</li>
+                                <li>Migration Strategies</li>
+                                <li>Migration Execution</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="service-card expandable" onclick="toggleService(this)">
+                        <h4>Application Modernization <i class="fas fa-chevron-down"></i></h4>
+                        <div class="service-details">
+                            <ul>
+                                <li>Multi-Service Architecture</li>
+                                <li>DevOps</li>
+                                <li>DevSecOps</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="service-card expandable" onclick="toggleService(this)">
+                        <h4>Cloud Cost Management <i class="fas fa-chevron-down"></i></h4>
+                        <div class="service-details">
+                            <ul>
+                                <li>Cloud FinOps Tool</li>
+                                <li>Managed FinOps Service</li>
+                                <li>Cloud Economics Experts</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="service-card expandable" onclick="toggleService(this)">
+                        <h4>Multi Cloud Managed Services <i class="fas fa-chevron-down"></i></h4>
+                        <div class="service-details">
+                            <ul>
+                                <li>24 x 7 Local Cloud Operations Center</li>
+                                <li>Managed Monitoring Services</li>
+                                <li>Managed Operation Services</li>
+                                <li>Business Continuity/ Disaster Recovery</li>
+                                <li>Managed Database Service</li>
+                                <li>Managed Backup</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="service-card expandable" onclick="toggleService(this)">
+                        <h4>Cloud Security <i class="fas fa-chevron-down"></i></h4>
+                        <div class="service-details">
+                            <ul>
+                                <li>24 x 7 Local Security Operations Center</li>
+                                <li>Design and Architecture</li>
+                                <li>Governance & Compliances</li>
+                                <li>Modern Workplace Security</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <h3>Cloud Migration</h3>
-                    <p>Seamlessly transition your applications and data to the cloud with our proven migration strategies and expert guidance.</p>
+            </div>
+            
+            <div class="service-category">
+                <h3 class="category-title">Managed Services</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h4>Managed Multi Cloud</h4>
+                        <p>Comprehensive management of your multi-cloud environment, ensuring optimal performance, security, and cost efficiency across all platforms.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Managed Google Workspace</h4>
+                        <p>Complete management of your Google Workspace environment, from deployment and configuration to security and ongoing optimization for maximum team productivity.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Managed M365</h4>
+                        <p>Full Microsoft 365 management services, from deployment to ongoing optimization, ensuring maximum productivity and security.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Managed FinOps</h4>
+                        <p>Ongoing financial operations management to continuously monitor, analyze, and optimize your cloud costs and resource utilization.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <h3>Cloud Security</h3>
-                    <p>Protect your cloud infrastructure with our comprehensive security solutions, ensuring your data remains safe and compliant.</p>
+                
+                <div class="coc-banner">
+                    <div class="coc-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="coc-content">
+                        <h4>Cloud Operation Center</h4>
+                        <p><span class="coc-highlight">24x7</span> - <span class="coc-highlight">Saudi Arabia Based</span> - Cloud Operations Centers Offering our Customers Cloud Managed Services</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <h3>DevOps and Automation</h3>
-                    <p>Streamline your development and operations with our DevOps practices and automation tools, accelerating your delivery pipeline.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Consultation CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h3>Get a Free Cloud Assessment</h3>
+                    <p>30-Minute Consultation with Our Cloud Experts - No Commitment Required</p>
                 </div>
-                <div class="service-card">
-                    <h3>Managed Cloud Services</h3>
-                    <p>Let us handle the complexity of cloud management while you focus on your core business objectives with our managed services.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Cost Management and Optimization</h3>
-                    <p>Optimize your cloud spending and maximize ROI with our cost management strategies and optimization techniques.</p>
-                </div>
+                <a href="#contact" class="btn cta-btn">Book Free Consultation</a>
             </div>
         </div>
     </section>
 
     <section id="technologies">
         <div class="container">
-            <h2>Technologies & Tools We Work With</h2>
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <i class="fab fa-docker"></i>
+            <h2>Cloud Vendors and Partners</h2>
+            
+            <div class="partner-category">
+                <h3 class="partner-category-title">Cloud Vendors</h3>
+                <div class="partner-grid">
+                    <div class="partner-card">
+                        <img src="../images/aws.png" alt="AWS">
+                        <h4>AWS</h4>
                     </div>
-                    <h3 class="tech-name">Docker</h3>
-                    <p class="tech-description">Container platform that enables applications to run consistently across environments.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <img src="../images/ansible.png" alt="Ansible" class="tech-img">
+                    <div class="partner-card">
+                        <img src="../images/google-cloud.png" alt="Google Cloud">
+                        <h4>Google Cloud</h4>
                     </div>
-                    <h3 class="tech-name">Ansible</h3>
-                    <p class="tech-description">Automation tool for configuration management, application deployment, and task automation.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <img src="../images/terraform.png" alt="Terraform" class="tech-img">
-                    </div>
-                    <h3 class="tech-name">Terraform</h3>
-                    <p class="tech-description">Infrastructure as Code tool for building, changing, and versioning infrastructure safely and efficiently.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <h3 class="tech-name">Git & GitHub</h3>
-                    <p class="tech-description">Version control and collaboration platform for software development projects.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <img src="../images/kubernetes.png" alt="Kubernetes" class="tech-img">
-                    </div>
-                    <h3 class="tech-name">Kubernetes</h3>
-                    <p class="tech-description">Open-source system for automating deployment, scaling, and management of containerized applications.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <i class="fab fa-jenkins"></i>
-                    </div>
-                    <h3 class="tech-name">Jenkins</h3>
-                    <p class="tech-description">Automation server for building, testing, and deploying software continuously.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <h3 class="tech-name">GitHub Actions</h3>
-                    <p class="tech-description">Built-in CI/CD workflow automation tool in GitHub for building, testing, and deploying code.</p>
                 </div>
             </div>
-        </div>
-    </section>
-    <div class="section-divider"></div>
-    <section id="cloud-providers">
-        <div class="container">
-            <h2 class="section-title">Cloud Providers We Work With</h2>
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <i class="fab fa-aws"></i>
+            
+            <div class="partner-category">
+                <h3 class="partner-category-title">Modern Workplace</h3>
+                <div class="partner-grid">
+                    <div class="partner-card">
+                        <img src="../images/google-workspace.png" alt="Google Workspace">
+                        <h4>Google Workspace</h4>
                     </div>
-                    <h3 class="tech-name">AWS</h3>
-                    <p class="tech-description">Leading cloud platform offering over 200 fully featured services from data centers globally.</p>
                 </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <i class="fab fa-microsoft"></i>
+            </div>
+            
+            <div class="partner-category">
+                <h3 class="partner-category-title">Backup & Disaster Recovery Partners</h3>
+                <div class="partner-grid">
+                    <div class="partner-card">
+                        <img src="../images/veeam.png" alt="Veeam">
+                        <h4>Veeam</h4>
                     </div>
-                    <h3 class="tech-name">Azure</h3>
-                    <p class="tech-description">Microsoft's cloud computing service for building, testing, deploying, and managing applications.</p>
+                    <div class="partner-card">
+                        <img src="../images/acronis.png" alt="Acronis">
+                        <h4>Acronis</h4>
+                    </div>
                 </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <i class="fab fa-google"></i>
+            </div>
+            
+            <div class="partner-category">
+                <h3 class="partner-category-title">Observability</h3>
+                <div class="partner-grid">
+                    <div class="partner-card">
+                        <img src="../images/newrelic.png" alt="New Relic">
+                        <h4>New Relic</h4>
                     </div>
-                    <h3 class="tech-name">Google Cloud</h3>
-                    <p class="tech-description">Suite of cloud computing services running on the same infrastructure that Google uses internally.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <img src="../images/alibaba.png" alt="Alibaba Cloud" class="tech-img">
+                    <div class="partner-card">
+                        <img src="../images/datadog.png" alt="Datadog">
+                        <h4>Datadog</h4>
                     </div>
-                    <h3 class="tech-name">Alibaba Cloud</h3>
-                    <p class="tech-description">Comprehensive suite of global cloud computing services to power your business.</p>
                 </div>
             </div>
         </div>
@@ -353,12 +399,49 @@
     
     <section id="who-we-are">
         <div class="container">
-            <h2>Who Are We</h2>
-            <div class="who-we-are-content">
-                <p>We are a team of cloud engineers at Lunixa Cloud Solutions (LCS), united by a deep passion for technology and a shared vision to lead digital transformation in the Kingdom. We leverage our expertise and innovation to empower organizations and companies, enabling them to achieve operational excellence through advanced and tailored cloud solutions.</p>
-                <p>LCS was founded on the belief that cloud transformation is not just a technical migration, but a strategic journey toward a more agile and innovative future. We are committed to delivering solutions that exceed expectations, support our clients' goals, and align with the Kingdom's aspirations.</p>
-                <p>Our mission is inspired by Saudi Arabia's Vision 2030, which motivates us to innovate, enhance efficiency, and develop national digital capabilities. Through our partnerships with clients, we contribute to building a diverse, knowledge-driven, and pioneering economy in the region.</p>
-                <p>At LCS, we don't just keep up with developments—we create them and lead the future of cloud in the Kingdom and beyond.</p>
+            <h2>Our Vision</h2>
+            <div class="who-we-are-content float-animation">
+                <p class="approach-text">Deliver impactful solutions that improve operational efficiency, reduce costs, and save valuable time</p>
+            </div>
+            
+            <h2 style="margin-top: 50px;">Our Presence</h2>
+            <div class="presence-grid">
+                <div class="country-card">
+                    <div class="flag-placeholder">
+                        <span>🇸🇦</span>
+                    </div>
+                    <h4>Saudi Arabia</h4>
+                </div>
+                <div class="country-card">
+                    <div class="flag-placeholder">
+                        <span>🇰🇼</span>
+                    </div>
+                    <h4>Kuwait</h4>
+                </div>
+                <div class="country-card">
+                    <div class="flag-placeholder">
+                        <span>🇴🇲</span>
+                    </div>
+                    <h4>Oman</h4>
+                </div>
+                <div class="country-card">
+                    <div class="flag-placeholder">
+                        <span>🇧🇭</span>
+                    </div>
+                    <h4>Bahrain</h4>
+                </div>
+                <div class="country-card">
+                    <div class="flag-placeholder">
+                        <span>🇶🇦</span>
+                    </div>
+                    <h4>Qatar</h4>
+                </div>
+                <div class="country-card">
+                    <div class="flag-placeholder">
+                        <span>🇦🇪</span>
+                    </div>
+                    <h4>UAE</h4>
+                </div>
             </div>
         </div>
     </section>
@@ -366,35 +449,57 @@
     
 <section id="why-work-with-us">
   <div class="container">
-    <h2>Why Work With Us</h2>
+    <h2>Why LUNIXA CLOUD SOLUTIONS</h2>
     <div class="why-grid">
       <div class="why-card">
-        <h3>1. Full Saudi Team</h3>
-        <p>
-          As a fully Saudi-owned company, LCS is deeply aligned with Vision 2030,
-          supporting national goals for digital transformation and local tech enablement.
-          We understand the local market, culture, and regulatory needs better than global providers.
-        </p>
+        <div class="why-number">1</div>
+        <h3>Professional Local Experts</h3>
+        <ul class="why-features">
+          <li>Deep understanding of Local Market and Regulations</li>
+          <li>Certified Cloud Experts and Digital Transformation Consultants</li>
+          <li>Hands-on support and customized solutions</li>
+          <li>Committed to the success of our local community</li>
+        </ul>
       </div>
       <div class="why-card">
-        <h3>2. Passionate Cloud Engineers & Trusted Consultants</h3>
-        <p>
-          We are passionate, certified cloud engineers and experienced consultants. We do not resell or act as a cloud provider. Instead, we serve as a bridge between you and the cloud, guiding you through every step of your cloud journey. Our dedication drives innovation, precision, and a personal commitment to delivering real value and tailored solutions for our clients.
-        </p>
+        <div class="why-number">2</div>
+        <h3>Digital Transformation Visionaries</h3>
+        <ul class="why-features">
+          <li>We deliver innovative and agile approaches to digital transformation</li>
+          <li>Our focus is on achieving operational excellence for your business</li>
+          <li>We provide tailored solutions designed for long-term growth</li>
+          <li>We are driving innovation and setting new standards in the cloud space</li>
+        </ul>
       </div>
       <div class="why-card">
-        <h3>3. Hands-On Support &amp; Services</h3>
-        <p>
-          We don’t disappear after deployment. We provide ongoing management,
-          monitoring, and support, so your cloud environment runs reliably and evolves with your business needs.
-        </p>
+        <div class="why-number">3</div>
+        <h3>Full Stack Managed Services</h3>
+        <ul class="why-features">
+          <li>Comprehensive cloud migration services</li>
+          <li>Seamless data and application transition</li>
+          <li>End-to-end cloud infrastructure management</li>
+          <li>24/7 dedicated support and monitoring</li>
+        </ul>
       </div>
       <div class="why-card">
-        <h3>4. Strategy + Execution</h3>
-        <p>
-          We combine technical delivery with strategic consulting to ensure your cloud transformation
-          aligns with your business goals and brings measurable ROI.
-        </p>
+        <div class="why-number">4</div>
+        <h3>Region Reach</h3>
+        <ul class="why-features">
+          <li>Strategic presence in the region's key markets</li>
+          <li>Partnerships with global cloud and solutions leaders</li>
+          <li>Enabling global expansion for our clients</li>
+          <li>Delivering world-class solutions globally</li>
+        </ul>
+      </div>
+      <div class="why-card">
+        <div class="why-number">5</div>
+        <h3>Cloud Cost Experts</h3>
+        <ul class="why-features">
+          <li>Continuous cost management and monitoring</li>
+          <li>Proactive cost optimization strategies</li>
+          <li>Expertise in FinOps practices and methodologies</li>
+          <li>Maximizing ROI on your cloud investments</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -403,19 +508,80 @@
 
 
 
-
     <section id="contact">
         <div class="container">
             <h2>Get in Touch</h2>
-            <div class="contact-buttons" style="display: flex; justify-content: center; gap: 30px; margin-top: 40px;">
-                <a href="https://wa.me/966581061426" target="_blank" class="contact-btn whatsapp-btn external-link" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 12px; padding: 18px 36px; border-radius: 8px; background: linear-gradient(90deg, #25D366 60%, #128C7E 100%); color: #fff; font-size: 1.2rem; font-weight: 600; box-shadow: 0 4px 24px rgba(37,211,102,0.15); transition: transform 0.2s, box-shadow 0.2s; animation: float 2.5s infinite; text-decoration: none;">
-                    <i class="fab fa-whatsapp" style="font-size: 1.5em;"></i>
-                    WhatsApp
-                </a>
-                <a href="mailto:team@lunixa.sa" target="_blank" class="contact-btn email-btn external-link" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 12px; padding: 18px 36px; border-radius: 8px; background: linear-gradient(90deg, #0072C6 60%, #005999 100%); color: #fff; font-size: 1.2rem; font-weight: 600; box-shadow: 0 4px 24px rgba(0,114,198,0.15); transition: transform 0.2s, box-shadow 0.2s; animation: float 2.5s 0.5s infinite; text-decoration: none;">
-                    <i class="fas fa-envelope" style="font-size: 1.5em;"></i>
-                    Email
-                </a>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form id="contactForm" action="https://formspree.io/f/xvgvvjww" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <select id="service" name="service" required>
+                                    <option value="">Select Service</option>
+                                    <option value="cloud-migration">Cloud Migration</option>
+                                    <option value="infrastructure">Infrastructure as Code</option>
+                                    <option value="devops">DevOps & Automation</option>
+                                    <option value="security">Cloud Security</option>
+                                    <option value="managed">Managed Services</option>
+                                    <option value="consultation">Consultation</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Tell us about your project" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn modern-btn">Send Message</button>
+                        <input type="hidden" name="_next" value="#contact">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission">
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Get in touch directly</h3>
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/966581061426" target="_blank" class="contact-btn whatsapp-btn modern-btn">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </a>
+                        <a href="mailto:team@lunixa.sa" target="_blank" class="contact-btn email-btn modern-btn">
+                            <i class="fas fa-envelope"></i>
+                            Email
+                        </a>
+                        <a href="https://www.linkedin.com/company/lunixacloud" target="_blank" class="contact-btn linkedin-btn modern-btn">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                        <a href="https://x.com/lunixacloud" target="_blank" class="contact-btn x-btn modern-btn">
+                            <i class="fab fa-x-twitter"></i>
+                            X
+                        </a>
+                    </div>
+                    <div class="contact-details-list">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Riyadh, Saudi Arabia</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+966 58 106 1426</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>team@lunixa.sa</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -425,7 +591,7 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <div class="logo-container footer-logo-container">
-                        <img src="../images/logo2.png" alt="SCS Logo" class="logo-img">
+                        <img src="../images/logo6.png" alt="SCS Logo" class="logo-img">
                         <div class="header-content">
                             <div class="company-names">
                                 <div class="company-name">
@@ -449,8 +615,7 @@
                     <ul>
                         <li><a href="#hero">Home</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#technologies">Technologies & Tools</a></li>
-                        <li><a href="#cloud-providers">Cloud Providers</a></li>
+                        <li><a href="#technologies">Our Partners</a></li>
                         <li><a href="#who-we-are">Who Are We</a></li>
                         <li><a href="#why-work-with-us">Why Work With Us</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -480,8 +645,20 @@
         </div>
     </footer>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/966581061426" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script src="../js/script.js"></script>
+    <script src="../js/hero-mouse.js"></script>
+    <script src="../js/contact-form.js"></script>
     <!-- Removed tech-circles.js as it's no longer needed with the new grid layout -->
+    <script>
+function toggleService(card) {
+    card.classList.toggle('active');
+}
+    </script>
     <script>
 // --- Loading overlay for new users only ---
 // Loading overlay and related functionality removed

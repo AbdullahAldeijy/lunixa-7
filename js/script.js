@@ -68,11 +68,9 @@ function initStickyHeader() {
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.style.padding = '10px 0';
-            header.style.backgroundColor = 'rgba(0, 52, 89, 0.95)'; // Darker, more opaque when scrolled
             header.style.boxShadow = '0 2px 15px rgba(0, 52, 89, 0.5)';
         } else {
             header.style.padding = '15px 0';
-            header.style.backgroundColor = 'rgba(0, 52, 89, 0.75)'; // Original watery blue with transparency
             header.style.boxShadow = '0 2px 15px rgba(0, 52, 89, 0.3)';
         }
     });

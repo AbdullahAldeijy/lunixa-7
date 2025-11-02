@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/technologies.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/modern-tech.css">
     <!-- <link rel="stylesheet" href="../css/lcs-loading.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Add Google Fonts for Arabic support -->
@@ -22,7 +23,7 @@
     <style>
         /* Arabic-specific styles */
         body {
-            font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             text-align: right;
         }
         /* Spinner for image loading */
@@ -96,7 +97,7 @@
     <header>
         <div class="container">
             <div class="logo-container" id="logo-container" style="cursor:pointer;">
-                <img src="../images/logo2.png" alt="لونيكسا كلاود سوليوشنز" class="logo-img">
+                <img src="../images/logo6.png" alt="لونيكسا كلاود سوليوشنز" class="logo-img">
                 <div class="header-content">
                     <div class="company-names">
                         <div class="company-name">
@@ -118,8 +119,7 @@
                 <ul>
                     <li><a href="#hero" class="home-link">الرئيسية</a></li>
                     <li><a href="#services">الخدمات</a></li>
-                    <li><a href="#technologies">التقنيات والأدوات</a></li>
-                    <li><a href="#cloud-providers">مزودو السحابة</a></li>
+                    <li><a href="#technologies">شركاؤنا</a></li>
                     <li><a href="#who-we-are">من نحن</a></li>
                     <li><a href="#why-work-with-us">لماذا نحن</a></li>
                     <li><a href="#contact">تواصل معنا</a></li>
@@ -137,7 +137,7 @@
             <div class="hero-content">
                 <h1>خليها على السحابة</h1>
                 <p>تحويل الأعمال من خلال حلول سحابية مبتكرة</p>
-                <a href="#services" class="btn">استكشف خدماتنا</a>
+                <a href="#services" class="btn modern-btn pulse-effect">استكشف خدماتنا</a>
             </div>
         </div>
     </section>
@@ -145,139 +145,220 @@
     <section id="services">
         <div class="container">
             <h2>خدماتنا</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>البنية التحتية كرمز</h3>
-                    <p>قم بأتمتة نشر وإدارة البنية التحتية الخاصة بك من خلال حلول البنية التحتية كرمز، مما يضمن الاتساق والموثوقية عبر بيئاتك.</p>
+            
+            <div class="service-category">
+                <h3 class="category-title">الخدمات المهنية</h3>
+                <div class="services-grid">
+                    <div class="service-card expandable" onclick="toggleService(this)">
+                        <h4>الهجرة إلى السحابة <i class="fas fa-chevron-down"></i></h4>
+                        <div class="service-details">
+                            <ul>
+                                <li>تقييم الهجرة إلى السحابة</li>
+                                <li>دراسة جدوى الهجرة</li>
+                                <li>تخطيط الهجرة</li>
+                                <li>استراتيجيات الهجرة</li>
+                                <li>تنفيذ الهجرة</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="service-card expandable" onclick="toggleService(this)">
+                        <h4>تحديث التطبيقات <i class="fas fa-chevron-down"></i></h4>
+                        <div class="service-details">
+                            <ul>
+                                <li>بنية متعددة الخدمات</li>
+                                <li>DevOps</li>
+                                <li>DevSecOps</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="service-card expandable" onclick="toggleService(this)">
+                        <h4>إدارة تكاليف السحابة <i class="fas fa-chevron-down"></i></h4>
+                        <div class="service-details">
+                            <ul>
+                                <li>أداة Cloud FinOps</li>
+                                <li>خدمة FinOps مُدارة</li>
+                                <li>خبراء اقتصاديات السحابة</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="service-card expandable" onclick="toggleService(this)">
+                        <h4>خدمات السحابة المتعددة المُدارة <i class="fas fa-chevron-down"></i></h4>
+                        <div class="service-details">
+                            <ul>
+                                <li>مركز عمليات سحابية محلي 24x7</li>
+                                <li>خدمات المراقبة المُدارة</li>
+                                <li>خدمات التشغيل المُدارة</li>
+                                <li>استمرارية الأعمال / استعادة الكوارث</li>
+                                <li>خدمة قواعد البيانات المُدارة</li>
+                                <li>النسخ الاحتياطي المُدار</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="service-card expandable" onclick="toggleService(this)">
+                        <h4>أمن السحابة <i class="fas fa-chevron-down"></i></h4>
+                        <div class="service-details">
+                            <ul>
+                                <li>مركز عمليات أمنية محلي 24x7</li>
+                                <li>التصميم والبنية</li>
+                                <li>الحوكمة والامتثال</li>
+                                <li>أمن بيئة العمل الحديثة</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <h3>الهجرة إلى السحابة</h3>
-                    <p>انتقل بسلاسة بتطبيقاتك وبياناتك إلى السحابة من خلال استراتيجيات الهجرة المثبتة والتوجيه الخبير.</p>
+            </div>
+            
+            <div class="service-category">
+                <h3 class="category-title">الخدمات المُدارة</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h4>إدارة السحابة المتعددة</h4>
+                        <p>إدارة شاملة لبيئة السحابة المتعددة الخاصة بك، مما يضمن الأداء الأمثل والأمان وكفاءة التكلفة عبر جميع المنصات.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>إدارة Google Workspace</h4>
+                        <p>إدارة كاملة لبيئة Google Workspace الخاصة بك، من النشر والتكوين إلى الأمان والتحسين المستمر لضمان أقصى إنتاجية لفرقك.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>إدارة M365</h4>
+                        <p>خدمات إدارة Microsoft 365 الكاملة، من النشر إلى التحسين المستمر، مما يضمن أقصى إنتاجية وأمان.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>إدارة العمليات المالية</h4>
+                        <p>إدارة مستمرة للعمليات المالية لمراقبة وتحليل وتحسين تكاليف السحابة واستخدام الموارد بشكل مستمر.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <h3>أمن السحابة</h3>
-                    <p>حماية البنية التحتية السحابية الخاصة بك من خلال حلول الأمان الشاملة، مما يضمن بقاء بياناتك آمنة ومتوافقة.</p>
+                
+                <div class="coc-banner">
+                    <div class="coc-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="coc-content">
+                        <h4>مركز عمليات السحابة</h4>
+                        <p><span class="coc-highlight">24x7</span> - <span class="coc-highlight">مقره المملكة العربية السعودية</span> - مراكز عمليات سحابية تقدم لعملائنا خدمات السحابة المُدارة</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <h3>DevOps والأتمتة</h3>
-                    <p>تبسيط التطوير والعمليات من خلال ممارسات DevOps وأدوات الأتمتة، مما يسرع خط أنابيب التسليم الخاص بك.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Consultation CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h3>احصل على تقييم سحابي مجاني</h3>
+                    <p>استشارة لمدة 30 دقيقة مع خبراء السحابة لدينا - بدون أي التزام</p>
                 </div>
-                <div class="service-card">
-                    <h3>خدمات السحابة المُدارة</h3>
-                    <p>دعنا نتعامل مع تعقيد إدارة السحابة بينما تركز على أهداف عملك الأساسية من خلال خدماتنا المُدارة.</p>
-                </div>
-                <div class="service-card">
-                    <h3>إدارة التكاليف والتحسين</h3>
-                    <p>تحسين الإنفاق السحابي وزيادة العائد على الاستثمار من خلال استراتيجيات إدارة التكاليف وتقنيات التحسين.</p>
-                </div>
+                <a href="#contact" class="btn cta-btn">احجز استشارة مجانية</a>
             </div>
         </div>
     </section>
 
     <section id="technologies">
         <div class="container">
-            <h2>التقنيات والأدوات التي نعمل بها</h2>
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <i class="fab fa-docker"></i>
+            <h2>موردو السحابة والشركاء</h2>
+            
+            <div class="partner-category">
+                <h3 class="partner-category-title">موردو السحابة</h3>
+                <div class="partner-grid">
+                    <div class="partner-card">
+                        <img src="../images/aws.png" alt="AWS">
+                        <h4>AWS</h4>
                     </div>
-                    <h3 class="tech-name">Docker</h3>
-                    <p class="tech-description">منصة حاويات تتيح تشغيل التطبيقات بشكل متسق عبر البيئات المختلفة.</p>
+                    <div class="partner-card">
+                        <img src="../images/google-cloud.png" alt="Google Cloud">
+                        <h4>Google Cloud</h4>
+                    </div>
                 </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <img src="../images/ansible.png" alt="Ansible" class="tech-img">
+            </div>
+            
+            <div class="partner-category">
+                <h3 class="partner-category-title">بيئة العمل الحديثة</h3>
+                <div class="partner-grid">
+                    <div class="partner-card">
+                        <img src="../images/google-workspace.png" alt="Google Workspace">
+                        <h4>Google Workspace</h4>
                     </div>
-                    <h3 class="tech-name">Ansible</h3>
-                    <p class="tech-description">أداة أتمتة لإدارة التهيئة ونشر التطبيقات وتنفيذ المهام تلقائيًا.</p>
                 </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <img src="../images/terraform.png" alt="Terraform" class="tech-img">
+            </div>
+            
+            <div class="partner-category">
+                <h3 class="partner-category-title">شركاء النسخ الاحتياطي واستعادة الكوارث</h3>
+                <div class="partner-grid">
+                    <div class="partner-card">
+                        <img src="../images/veeam.png" alt="Veeam">
+                        <h4>Veeam</h4>
                     </div>
-                    <h3 class="tech-name">Terraform</h3>
-                    <p class="tech-description">أداة بنية تحتية كرمز لبناء وتغيير وإدارة البنية التحتية بأمان وكفاءة.</p>
+                    <div class="partner-card">
+                        <img src="../images/acronis.png" alt="Acronis">
+                        <h4>Acronis</h4>
+                    </div>
                 </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <i class="fab fa-github"></i>
+            </div>
+            
+            <div class="partner-category">
+                <h3 class="partner-category-title">المراقبة</h3>
+                <div class="partner-grid">
+                    <div class="partner-card">
+                        <img src="../images/newrelic.png" alt="New Relic">
+                        <h4>New Relic</h4>
                     </div>
-                    <h3 class="tech-name">Git & GitHub</h3>
-                    <p class="tech-description">منصة لإدارة الإصدارات والتعاون في مشاريع تطوير البرمجيات.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <img src="../images/kubernetes.png" alt="Kubernetes" class="tech-img">
+                    <div class="partner-card">
+                        <img src="../images/datadog.png" alt="Datadog">
+                        <h4>Datadog</h4>
                     </div>
-                    <h3 class="tech-name">Kubernetes</h3>
-                    <p class="tech-description">نظام مفتوح المصدر لأتمتة نشر وإدارة التطبيقات الحاوية.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <i class="fab fa-jenkins"></i>
-                    </div>
-                    <h3 class="tech-name">Jenkins</h3>
-                    <p class="tech-description">خادم أتمتة لبناء واختبار ونشر البرمجيات بشكل مستمر.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <h3 class="tech-name">GitHub Actions</h3>
-                    <p class="tech-description">أداة أتمتة سير العمل CI/CD مدمجة في GitHub لتسهيل عمليات البناء والاختبار والنشر.</p>
                 </div>
             </div>
         </div>
     </section>
-    <div class="section-divider"></div>
-    <section id="cloud-providers">
-        <div class="container">
-            <h2 class="section-title">مزودو الخدمات السحابية الذين نعمل معهم</h2>
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <i class="fab fa-aws"></i>
-                    </div>
-                    <h3 class="tech-name">AWS</h3>
-                    <p class="tech-description">منصة سحابية رائدة تقدم أكثر من 200 خدمة كاملة من مراكز بيانات عالمية.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <i class="fab fa-microsoft"></i>
-                    </div>
-                    <h3 class="tech-name">Azure</h3>
-                    <p class="tech-description">خدمة الحوسبة السحابية من مايكروسوفت لبناء واختبار ونشر وإدارة التطبيقات.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <i class="fab fa-google"></i>
-                    </div>
-                    <h3 class="tech-name">Google Cloud</h3>
-                    <p class="tech-description">مجموعة من خدمات الحوسبة السحابية تعمل على نفس البنية التحتية التي تستخدمها Google داخليًا.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-icon-wrapper">
-                        <img src="../images/alibaba.png" alt="Alibaba Cloud" class="tech-img">
-                    </div>
-                    <h3 class="tech-name">Alibaba Cloud</h3>
-                    <p class="tech-description">مجموعة شاملة من خدمات الحوسبة السحابية العالمية لدعم أعمالك.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <section id="who-we-are">
         <div class="container">
-            <h2>من نحن</h2>
-            <div class="who-we-are-content">
-                <p>نحن فريق من مهندسي السحابة في لونيكسا للحلول السحابية (LCS)، يجمعنا شغف عميق بالتقنية ورؤية موحدة لقيادة التحول الرقمي في المملكة. نضع خبراتنا وابتكارنا في خدمة المؤسسات والشركات، لنمكّنهما من تحقيق التميز التشغيلي عبر حلول سحابية متقدمة ومخصصة.</p>
-
-                <p>تأسست LCS من إيماننا بأن التحول السحابي ليس مجرد انتقال تقني، بل رحلة استراتيجية نحو مستقبل أكثر مرونة وابتكارًا. نلتزم بتقديم حلول تتجاوز التوقعات، تدعم أهداف عملائنا وتواكب تطلعات المملكة.</p>
-
-                <p>نستلهم مهمتنا من رؤية المملكة العربية السعودية 2030، التي تحفزنا على الابتكار، وتعزيز الكفاءة، وتطوير القدرات الرقمية الوطنية. من خلال شراكاتنا مع عملائنا، نساهم في بناء اقتصاد معرفي متنوع وريادي في المنطقة.</p>
-
-                <p>في LCS، لا نكتفي بمواكبة التطورات — بل نصنعها ونقود مستقبل السحابة في المملكة وخارجها.</p>
+            <h2>رؤيتنا</h2>
+            <div class="who-we-are-content float-animation">
+                <p class="approach-text">نقدم حلولاً مؤثرة تحسّن الكفاءة التشغيلية، وتخفض التكاليف، وتوفر الوقت الثمين</p>
+            </div>
+            
+            <h2 style="margin-top: 50px;">تواجدنا</h2>
+            <div class="presence-grid">
+                <div class="country-card">
+                    <div class="flag-placeholder">
+                        <span>🇸🇦</span>
+                    </div>
+                    <h4>المملكة العربية السعودية</h4>
+                </div>
+                <div class="country-card">
+                    <div class="flag-placeholder">
+                        <span>🇰🇼</span>
+                    </div>
+                    <h4>الكويت</h4>
+                </div>
+                <div class="country-card">
+                    <div class="flag-placeholder">
+                        <span>🇴🇲</span>
+                    </div>
+                    <h4>عُمان</h4>
+                </div>
+                <div class="country-card">
+                    <div class="flag-placeholder">
+                        <span>🇧🇭</span>
+                    </div>
+                    <h4>البحرين</h4>
+                </div>
+                <div class="country-card">
+                    <div class="flag-placeholder">
+                        <span>🇶🇦</span>
+                    </div>
+                    <h4>قطر</h4>
+                </div>
+                <div class="country-card">
+                    <div class="flag-placeholder">
+                        <span>🇦🇪</span>
+                    </div>
+                    <h4>الإمارات</h4>
+                </div>
             </div>
         </div>
     </section>
@@ -285,33 +366,57 @@
 
     <section id="why-work-with-us">
   <div class="container">
-    <h2>لماذا تعمل معنا</h2>
+    <h2>لماذا لونيكسا للحلول السحابية</h2>
     <div class="why-grid">
       <div class="why-card">
-        <h3>1. فريق سعودي بالكامل</h3>
-        <p>
-          بصفتنا شركة مملوكة بالكامل للسعوديين، فإن LCS متوافقة تمامًا مع رؤية 2030،
-          وتدعم الأهداف الوطنية للتحول الرقمي وتمكين التقنية المحلية.
-          نحن نفهم السوق المحلي والثقافة والأنظمة التنظيمية بشكل أفضل من المزودين العالميين.
-        </p>
+        <div class="why-number">1</div>
+        <h3>خبراء محليون محترفون</h3>
+        <ul class="why-features">
+          <li>فهم عميق للسوق المحلي والأنظمة</li>
+          <li>خبراء سحابة معتمدون ومستشارو تحول رقمي</li>
+          <li>دعم عملي وحلول مخصصة</li>
+          <li>ملتزمون بنجاح مجتمعنا المحلي</li>
+        </ul>
       </div>
       <div class="why-card">
-        <h3>2. مهندسو سحابة شغوفون ومستشارون موثوقون</h3>
-        <p>
-          نحن مهندسون شغوفون بالحوسبة السحابية ومستشارون معتمدون، ولسنا موزعين أو مزودين للخدمة. نعمل كجسر بين مزودي الخدمات السحابية والعملاء، ونرشدكم في كل خطوة من رحلتكم السحابية. شغفنا وخبرتنا يقودان الابتكار والدقة والالتزام الشخصي بتقديم حلول حقيقية ومخصصة تحقق قيمة مضافة لعملائنا.
-        </p>
+        <div class="why-number">2</div>
+        <h3>رواد التحول الرقمي</h3>
+        <ul class="why-features">
+          <li>نقدم أساليب مبتكرة ومرنة للتحول الرقمي</li>
+          <li>تركيزنا على تحقيق التميز التشغيلي لأعمالك</li>
+          <li>نوفر حلولاً مخصصة مصممة للنمو طويل الأجل</li>
+          <li>نقود الابتكار ونضع معايير جديدة في مجال السحابة</li>
+        </ul>
       </div>
       <div class="why-card">
-        <h3>3. دعم وخدمات مدارة عملية</h3>
-        <p>
-          لا نختفي بعد الإطلاق. نحن نوفر إدارة ومراقبة ودعم مستمر لضمان أن بيئتك السحابية تعمل بثبات وتتطور حسب احتياجات عملك.
-        </p>
+        <div class="why-number">3</div>
+        <h3>خدمات مُدارة متكاملة</h3>
+        <ul class="why-features">
+          <li>خدمات هجرة سحابية شاملة</li>
+          <li>انتقال سلس للبيانات والتطبيقات</li>
+          <li>إدارة شاملة للبنية التحتية السحابية</li>
+          <li>دعم ومراقبة مخصصة على مدار الساعة</li>
+        </ul>
       </div>
       <div class="why-card">
-        <h3>4. استشارات استراتيجية + تنفيذ</h3>
-        <p>
-          نحن ندمج التنفيذ التقني مع الاستشارات الاستراتيجية لضمان أن تحولك السحابي يتماشى مع أهداف عملك ويحقق عائدًا ملموسًا على الاستثمار.
-        </p>
+        <div class="why-number">4</div>
+        <h3>انتشار إقليمي</h3>
+        <ul class="why-features">
+          <li>تواجد استراتيجي في الأسواق الرئيسية بالمنطقة</li>
+          <li>شراكات مع قادة الحلول السحابية العالمية</li>
+          <li>تمكين التوسع العالمي لعملائنا</li>
+          <li>تقديم حلول عالمية المستوى في جميع أنحاء العالم</li>
+        </ul>
+      </div>
+      <div class="why-card">
+        <div class="why-number">5</div>
+        <h3>خبراء تكاليف السحابة</h3>
+        <ul class="why-features">
+          <li>إدارة ومراقبة مستمرة للتكاليف</li>
+          <li>استراتيجيات استباقية لتحسين التكاليف</li>
+          <li>خبرة في ممارسات ومنهجيات FinOps</li>
+          <li>تعظيم العائد على استثماراتك السحابية</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -320,15 +425,77 @@
     <section id="contact">
         <div class="container">
             <h2>تواصل معنا</h2>
-            <div class="contact-buttons" style="display: flex; justify-content: center; gap: 30px; margin-top: 40px;">
-                <a href="https://wa.me/966581061426" target="_blank" class="contact-btn whatsapp-btn external-link" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 12px; padding: 18px 36px; border-radius: 8px; background: linear-gradient(90deg, #25D366 60%, #128C7E 100%); color: #fff; font-size: 1.2rem; font-weight: 600; box-shadow: 0 4px 24px rgba(37,211,102,0.15); transition: transform 0.2s, box-shadow 0.2s; animation: float 2.5s infinite; text-decoration: none;">
-                    <i class="fab fa-whatsapp" style="font-size: 1.5em;"></i>
-                    واتساب
-                </a>
-                <a href="mailto:team@lunixa.sa" target="_blank" class="contact-btn email-btn external-link" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 12px; padding: 18px 36px; border-radius: 8px; background: linear-gradient(90deg, #0072C6 60%, #005999 100%); color: #fff; font-size: 1.2rem; font-weight: 600; box-shadow: 0 4px 24px rgba(0,114,198,0.15); transition: transform 0.2s, box-shadow 0.2s; animation: float 2.5s 0.5s infinite; text-decoration: none;">
-                    <i class="fas fa-envelope" style="font-size: 1.5em;"></i>
-                    البريد الإلكتروني
-                </a>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h3>أرسل لنا رسالة</h3>
+                    <form id="contactForm" action="https://formspree.io/f/xvgvvjww" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="اسمك" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="بريدك الإلكتروني" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="رقم الهاتف">
+                            </div>
+                            <div class="form-group">
+                                <select id="service" name="service" required>
+                                    <option value="">اختر الخدمة</option>
+                                    <option value="cloud-migration">الهجرة إلى السحابة</option>
+                                    <option value="infrastructure">البنية التحتية كرمز</option>
+                                    <option value="devops">DevOps والأتمتة</option>
+                                    <option value="security">أمن السحابة</option>
+                                    <option value="managed">الخدمات المُدارة</option>
+                                    <option value="consultation">استشارة</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="أخبرنا عن مشروعك" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn modern-btn">إرسال الرسالة</button>
+                        <input type="hidden" name="_next" value="#contact">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission - Arabic">
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>تواصل معنا مباشرة</h3>
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/966581061426" target="_blank" class="contact-btn whatsapp-btn modern-btn">
+                            <i class="fab fa-whatsapp"></i>
+                            واتساب
+                        </a>
+                        <a href="mailto:team@lunixa.sa" target="_blank" class="contact-btn email-btn modern-btn">
+                            <i class="fas fa-envelope"></i>
+                            بريد إلكتروني
+                        </a>
+                        <a href="https://www.linkedin.com/company/lunixacloud" target="_blank" class="contact-btn linkedin-btn modern-btn">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                        <a href="https://x.com/lunixacloud" target="_blank" class="contact-btn x-btn modern-btn">
+                            <i class="fab fa-x-twitter"></i>
+                            X
+                        </a>
+                    </div>
+                    <div class="contact-details-list">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>الرياض، المملكة العربية السعودية</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+966 58 106 1426</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>team@lunixa.sa</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -338,7 +505,7 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <div class="logo-container footer-logo-container">
-                        <img src="../images/logo2.png" alt="LCS Logo" class="logo-img">
+                        <img src="../images/logo6.png" alt="LCS Logo" class="logo-img">
                         <div class="header-content">
                             <div class="company-names">
                                 <div class="company-name arabic">
@@ -362,8 +529,7 @@
                     <ul>
                         <li><a href="#hero">الرئيسية</a></li>
                         <li><a href="#services">الخدمات</a></li>
-                        <li><a href="#technologies">التقنيات والأدوات</a></li>
-                        <li><a href="#cloud-providers">مزودو السحابة</a></li>
+                        <li><a href="#technologies">شركاؤنا</a></li>
                         <li><a href="#who-we-are">من نحن</a></li>
                         <li><a href="#why-work-with-us">لماذا نحن</a></li>
                         <li><a href="#contact">تواصل معنا</a></li>
@@ -392,9 +558,76 @@
         </div>
     </footer>
 
-    <!-- SCS Loading Overlay (Arabic, same as EN version) -->
-    <!-- Loading overlay and related functionality removed -->
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/966581061426" class="whatsapp-float" target="_blank" aria-label="تواصل معنا عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-</script>
+    <script src="../js/script.js"></script>
+    <script src="../js/hero-mouse.js"></script>
+    <script src="../js/contact-form.js"></script>
+    <script>
+function toggleService(card) {
+    card.classList.toggle('active');
+}
+    </script>
+    <script>
+        // Home link functionality
+        document.querySelectorAll('.home-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+        
+        // Logo click functionality
+        const logoContainer = document.getElementById('logo-container');
+        if (logoContainer) {
+            logoContainer.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        
+        // Auto scroll to top on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            if ((window.location.pathname.endsWith('/en') || window.location.pathname.endsWith('/ar')) && !window.location.hash) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+        
+        // Image loading spinner
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('img').forEach(function(img) {
+                if (img.parentElement && img.parentElement.classList.contains('img-wrapper')) return;
+                
+                var wrapper = document.createElement('div');
+                wrapper.className = 'img-wrapper';
+                img.parentNode.insertBefore(wrapper, img);
+                wrapper.appendChild(img);
+                
+                var spinner = document.createElement('div');
+                spinner.className = 'img-spinner';
+                spinner.innerHTML = '<div class="spinner"></div>';
+                wrapper.appendChild(spinner);
+                
+                spinner.style.display = 'flex';
+                
+                img.addEventListener('load', function() {
+                    img.classList.add('img-loaded');
+                    spinner.style.display = 'none';
+                });
+                
+                img.addEventListener('error', function() {
+                    spinner.innerHTML = '<span style="color:red;font-size:1.5em;">⚠</span>';
+                    spinner.style.display = 'flex';
+                });
+                
+                if (img.complete && img.naturalWidth !== 0) {
+                    img.classList.add('img-loaded');
+                    spinner.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

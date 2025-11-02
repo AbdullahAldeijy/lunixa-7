@@ -1,0 +1,194 @@
+/* Modern Tech Enhancements */
+
+/* Smooth scrolling for all elements */
+* {
+    scroll-behavior: smooth;
+}
+
+/* Modern glassmorphism effects */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Animated gradient backgrounds */
+.gradient-bg {
+    background: linear-gradient(-45deg, #1080f0, #0066cc, #1080f0, #0052a3);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Modern button hover effects */
+.modern-btn {
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+.modern-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s;
+}
+
+.modern-btn:hover::before {
+    left: 100%;
+}
+
+/* Floating animation for cards */
+.float-animation {
+    animation: floatUp 6s ease-in-out infinite;
+}
+
+.float-animation:nth-child(2n) {
+    animation-delay: -2s;
+}
+
+.float-animation:nth-child(3n) {
+    animation-delay: -4s;
+}
+
+@keyframes floatUp {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Modern loading states */
+.loading-shimmer {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Tech grid patterns */
+.tech-grid-bg {
+    background-image: 
+        linear-gradient(rgba(16, 128, 240, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 128, 240, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 20px 20px;
+    }
+}
+
+/* Modern focus states */
+.modern-focus:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(16, 128, 240, 0.3);
+    border-color: var(--primary-color);
+}
+
+/* Pulse effect for important elements */
+.pulse-effect {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(16, 128, 240, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(16, 128, 240, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 128, 240, 0);
+    }
+}
+
+/* Modern typography effects */
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0066cc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Smooth transitions for all interactive elements */
+button, a, .card, .btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Modern scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--primary-color), #0066cc);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #0066cc, var(--primary-color));
+}
+
+/* Modern selection */
+::selection {
+    background: rgba(16, 128, 240, 0.3);
+    color: var(--secondary-color);
+}
+
+/* Responsive modern effects */
+@media (max-width: 768px) {
+    .float-animation {
+        animation-duration: 4s;
+    }
+    
+    .tech-grid-bg {
+        background-size: 15px 15px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .loading-shimmer {
+        background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #2a2a2a;
+    }
+}

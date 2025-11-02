@@ -1,11 +1,11 @@
 /* Responsive Design Stylesheet */
 :root {
-    --primary-color: #4a90e2;
-    --secondary-color: #003459;
-    --accent-color: #d9b38c;
-    --text-color: #333;
-    --light-color: #f8f9fa;
-    --dark-color: #212529;
+    --primary-color: #1080f0;
+    --secondary-color: #000000;
+    --accent-color: #999999;
+    --text-color: #000000;
+    --light-color: #ffffff;
+    --dark-color: #000000;
 }
 
 /* Base responsive settings */
@@ -184,11 +184,11 @@ img {
 /* Hero Section Responsive */
 @media (max-width: 992px) {
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     
     .hero-content p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     
     .merge-animation-container {
@@ -202,13 +202,13 @@ img {
     }
     
     .hero-content h1 {
-        font-size: 2.2rem;
-        margin-bottom: 15px;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
     }
     
     .hero-content p {
         font-size: 1.1rem;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
     }
     
     .merge-animation-container {
@@ -226,7 +226,7 @@ img {
 
 @media (max-width: 576px) {
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
     .hero-content p {
@@ -258,8 +258,8 @@ img {
     }
     
     #services h2 {
-        font-size: 2.2rem;
-        margin-bottom: 40px;
+        font-size: 2.5rem;
+        margin-bottom: 50px;
     }
     
     .services-grid {
@@ -274,8 +274,8 @@ img {
     }
     
     #services h2 {
-        font-size: 2rem;
-        margin-bottom: 30px;
+        font-size: 2.2rem;
+        margin-bottom: 40px;
     }
     
     .services-grid {
@@ -303,8 +303,8 @@ img {
     }
     
     #services h2 {
-        font-size: 1.8rem;
-        margin-bottom: 25px;
+        font-size: 2rem;
+        margin-bottom: 30px;
     }
     
     .services-grid {
