@@ -724,7 +724,7 @@ html[dir="rtl"] .footer-social h3::after {
 
 /* Services Section */
 #services {
-    padding: 120px 0;
+    padding: 100px 0;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     position: relative;
     overflow: hidden;
@@ -743,8 +743,8 @@ html[dir="rtl"] .footer-social h3::after {
 
 #services h2 {
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 60px;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
     color: var(--secondary-color);
     position: relative;
     padding-bottom: 20px;
@@ -765,20 +765,20 @@ html[dir="rtl"] .footer-social h3::after {
 }
 
 .service-category {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     position: relative;
     padding: 40px;
-    background: rgba(255, 255, 255, 0.5);
+    background: white;
     backdrop-filter: blur(20px);
-    border-radius: 24px;
+    border-radius: 16px;
     border: 1px solid rgba(16, 128, 240, 0.1);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: var(--transition);
 }
 
 .service-category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 60px rgba(16, 128, 240, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(16, 128, 240, 0.15);
     border-color: rgba(16, 128, 240, 0.2);
 }
 
@@ -872,14 +872,14 @@ html[dir="rtl"] .footer-social h3::after {
 }
 
 .category-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 800;
     background: linear-gradient(135deg, var(--primary-color) 0%, #0066cc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     position: relative;
     padding-bottom: 20px;
     letter-spacing: -0.02em;
@@ -916,11 +916,11 @@ html[dir="rtl"] .footer-social h3::after {
 }
 
 .service-card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.8) 100%);
+    background: white;
     backdrop-filter: blur(20px);
-    border-radius: 20px;
+    border-radius: 16px;
     border: 1px solid rgba(16, 128, 240, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     transition: var(--transition);
     position: relative;
@@ -957,10 +957,9 @@ html[dir="rtl"] .footer-social h3::after {
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(16, 128, 240, 0.15);
-    border-color: rgba(16, 128, 240, 0.3);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(16, 128, 240, 0.2);
+    border-color: var(--primary-color);
 }
 
 .service-card:hover::before {
@@ -1103,7 +1102,7 @@ html[dir="rtl"] .footer-social h3::after {
 
 /* Technologies Section */
 #technologies {
-    padding: 120px 0;
+    padding: 100px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     position: relative;
     overflow: hidden;
@@ -1122,8 +1121,8 @@ html[dir="rtl"] .footer-social h3::after {
 
 #technologies h2 {
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 60px;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
     color: var(--secondary-color);
     position: relative;
     padding-bottom: 20px;
@@ -1151,11 +1150,11 @@ html[dir="rtl"] .footer-social h3::after {
 }
 
 .tech-card {
-    background: rgba(255, 255, 255, 0.8);
+    background: white;
     backdrop-filter: blur(20px);
-    border-radius: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    border: 1px solid rgba(16, 128, 240, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     padding: 32px 24px;
     text-align: center;
     transition: var(--transition);
@@ -1176,8 +1175,8 @@ html[dir="rtl"] .footer-social h3::after {
 
 .tech-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(16, 128, 240, 0.15);
-    border-color: rgba(16, 128, 240, 0.2);
+    box-shadow: 0 12px 40px rgba(16, 128, 240, 0.2);
+    border-color: var(--primary-color);
 }
 
 .tech-card:hover::before {
@@ -1201,7 +1200,7 @@ html[dir="rtl"] .footer-social h3::after {
 }
 
 .partner-category-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: var(--secondary-color);
     margin-bottom: 30px;
@@ -1498,7 +1497,7 @@ html[dir="rtl"] .footer-social h3::after {
 
 /* Contact Section */
 #contact {
-    padding: 120px 0;
+    padding: 100px 0;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     position: relative;
     overflow: hidden;
@@ -1517,8 +1516,8 @@ html[dir="rtl"] .footer-social h3::after {
 
 #contact h2 {
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 60px;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
     color: var(--secondary-color);
     position: relative;
     padding-bottom: 20px;
@@ -2197,7 +2196,7 @@ html[dir="rtl"] .btn-subscribe {
 }
 /* Who We Are Section */
 #who-we-are {
-    padding: 80px 0;
+    padding: 100px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     position: relative;
     overflow: hidden;
@@ -2216,8 +2215,8 @@ html[dir="rtl"] .btn-subscribe {
 
 #who-we-are h2 {
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 60px;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
     color: var(--secondary-color);
     position: relative;
     padding-bottom: 20px;
@@ -2241,12 +2240,12 @@ html[dir="rtl"] .btn-subscribe {
 .who-we-are-content {
     max-width: 1000px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.8);
+    background: white;
     backdrop-filter: blur(20px);
     padding: 48px;
-    border-radius: 24px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    border: 1px solid rgba(16, 128, 240, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     position: relative;
     z-index: 1;
     transition: var(--transition);
@@ -2270,8 +2269,8 @@ html[dir="rtl"] .btn-subscribe {
 
 .who-we-are-content:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(16, 128, 240, 0.15);
-    border-color: rgba(16, 128, 240, 0.2);
+    box-shadow: 0 12px 40px rgba(16, 128, 240, 0.2);
+    border-color: var(--primary-color);
 }
 
 .who-we-are-content:hover::before {
@@ -2305,7 +2304,7 @@ html[dir="rtl"] .btn-subscribe {
 }
 
 .country-card {
-    background: white;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     border-radius: 12px;
     padding: 20px 16px;
     text-align: center;
@@ -2321,8 +2320,17 @@ html[dir="rtl"] .btn-subscribe {
 }
 
 .flag-placeholder {
-    font-size: 48px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flag-placeholder img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
 }
 
 .country-card h4 {
@@ -2367,7 +2375,7 @@ html[dir="rtl"] .btn-subscribe {
 
 /* Why Work With Us Section */
 #why-work-with-us {
-    padding: 120px 0;
+    padding: 100px 0;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     position: relative;
     overflow: hidden;
@@ -2386,8 +2394,8 @@ html[dir="rtl"] .btn-subscribe {
 
 #why-work-with-us h2 {
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 60px;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
     color: var(--secondary-color);
     position: relative;
     padding-bottom: 20px;
@@ -2429,11 +2437,11 @@ html[dir="rtl"] .btn-subscribe {
 }
 
 .why-card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
+    background: white;
     backdrop-filter: blur(20px);
-    border-radius: 24px;
-    border: 2px solid rgba(16, 128, 240, 0.1);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    border: 1px solid rgba(16, 128, 240, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     overflow: visible;
     transition: var(--transition);
     position: relative;
@@ -2470,9 +2478,9 @@ html[dir="rtl"] .btn-subscribe {
 }
 
 .why-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 25px 60px rgba(16, 128, 240, 0.2);
-    border-color: rgba(16, 128, 240, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(16, 128, 240, 0.2);
+    border-color: var(--primary-color);
 }
 
 .why-card:hover::before {
@@ -2585,8 +2593,8 @@ html[dir="rtl"] .btn-subscribe {
 
 .section-title {
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 60px;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
     color: var(--secondary-color);
     position: relative;
     padding-bottom: 20px;
@@ -2607,8 +2615,8 @@ html[dir="rtl"] .btn-subscribe {
 }
 
 #cloud-providers {
-    margin-bottom: 80px;
-    padding: 120px 0;
+    margin-bottom: 0;
+    padding: 100px 0;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     position: relative;
     overflow: hidden;
