@@ -21,8 +21,7 @@
 .partners-track {
     display: flex;
     gap: 60px;
-    animation: scroll-left 30s linear infinite;
-    width: max-content;
+    animation: scroll-left 40s linear infinite;
 }
 
 .partners-track img {
@@ -55,7 +54,7 @@
 }
 
 @keyframes scroll-left {
-    0% { transform: translateX(0); }
+    0% { transform: translateX(0%); }
     100% { transform: translateX(-50%); }
 }
 
@@ -68,17 +67,18 @@
 .presence-track {
     display: flex;
     gap: 60px;
-    animation: scroll-left 25s linear infinite;
-    width: max-content;
+    animation: scroll-left 30s linear infinite;
 }
 
 .presence-track img {
     height: 80px !important;
     width: 80px !important;
-    object-fit: cover;
-    border-radius: 50%;
+    min-width: 80px !important;
+    min-height: 80px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
     flex-shrink: 0;
-    border: 3px solid rgba(16, 128, 240, 0.5);
+    border: 3px solid rgba(16, 128, 240, 0.5) !important;
     display: block !important;
 }
 
