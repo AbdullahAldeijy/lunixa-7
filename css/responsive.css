@@ -12,23 +12,32 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
     overflow-x: hidden;
     width: 100%;
+    min-width: 320px;
 }
 
 img {
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 16px;
+    }
 }
 
 /* Responsive Typography */
@@ -40,19 +49,25 @@ img {
 
 @media (max-width: 992px) {
     html {
-        font-size: 14px;
+        font-size: 14.5px;
     }
 }
 
 @media (max-width: 768px) {
     html {
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 
 @media (max-width: 576px) {
     html {
-        font-size: 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 375px) {
+    html {
+        font-size: 13px;
     }
 }
 
@@ -90,11 +105,15 @@ img {
 
 @media (max-width: 768px) {
     header {
-        padding: 10px 0;
+        padding: 12px 0;
+    }
+    
+    header .container {
+        padding: 0 16px;
     }
     
     .logo-img {
-        height: 40px;
+        height: 42px;
     }
     
     .company-names {
@@ -198,12 +217,18 @@ img {
 
 @media (max-width: 768px) {
     #hero {
-        padding: 80px 0 40px;
+        padding: 100px 0 50px;
+        min-height: 90vh;
+    }
+    
+    .hero-content {
+        padding: 0 16px;
     }
     
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         margin-bottom: 20px;
+        line-height: 1.2;
     }
     
     .hero-content p {
@@ -225,12 +250,18 @@ img {
 }
 
 @media (max-width: 576px) {
+    #hero {
+        padding: 90px 0 40px;
+    }
+    
     .hero-content h1 {
-        font-size: 2.2rem;
+        font-size: 1.9rem;
+        margin-bottom: 16px;
     }
     
     .hero-content p {
         font-size: 1rem;
+        margin-bottom: 24px;
     }
     
     .merge-animation-container {
@@ -270,12 +301,20 @@ img {
 
 @media (max-width: 768px) {
     #services {
-        padding: 60px 0;
+        padding: 50px 0;
     }
     
     #services h2 {
-        font-size: 2.2rem;
-        margin-bottom: 40px;
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .services-grid-modern {
+        gap: 20px;
+    }
+    
+    .service-card-modern {
+        padding: 24px;
     }
     
     .services-grid {
@@ -299,16 +338,32 @@ img {
 
 @media (max-width: 576px) {
     #services {
-        padding: 50px 0;
+        padding: 40px 0;
     }
     
     #services h2 {
-        font-size: 2rem;
-        margin-bottom: 30px;
+        font-size: 1.8rem;
+        margin-bottom: 24px;
     }
     
     .services-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .services-grid-modern {
+        gap: 16px;
+    }
+    
+    .service-card-modern {
+        padding: 20px;
+    }
+    
+    .service-card-modern h3 {
+        font-size: 1.2rem;
+    }
+    
+    .service-card-modern p {
+        font-size: 0.9rem;
     }
 }
 
@@ -340,12 +395,17 @@ img {
 
 @media (max-width: 768px) {
     #technologies {
-        padding: 60px 0;
+        padding: 50px 0;
     }
     
     #technologies h2 {
         font-size: 2rem;
-        margin-bottom: 30px;
+        margin-bottom: 24px;
+    }
+    
+    .partners-track img {
+        height: 50px !important;
+        padding: 12px 20px;
     }
     
     .tech-grid {
@@ -356,12 +416,25 @@ img {
 
 @media (max-width: 576px) {
     #technologies {
-        padding: 50px 0;
+        padding: 40px 0;
     }
     
     #technologies h2 {
-        font-size: 1.8rem;
-        margin-bottom: 25px;
+        font-size: 1.7rem;
+        margin-bottom: 20px;
+    }
+    
+    .partners-track img {
+        height: 45px !important;
+        max-width: 120px !important;
+        padding: 10px 18px;
+    }
+    
+    .presence-track img {
+        height: 70px !important;
+        width: 70px !important;
+        min-width: 70px !important;
+        min-height: 70px !important;
     }
     
     .tech-grid {
@@ -403,12 +476,16 @@ img {
 
 @media (max-width: 768px) {
     #contact {
-        padding: 60px 0;
+        padding: 50px 0;
     }
     
     #contact h2 {
         font-size: 2rem;
-        margin-bottom: 30px;
+        margin-bottom: 24px;
+    }
+    
+    .contact-form {
+        padding: 28px;
     }
     
     .contact-container {
@@ -427,16 +504,20 @@ img {
 
 @media (max-width: 576px) {
     #contact {
-        padding: 50px 0;
+        padding: 40px 0;
     }
     
     #contact h2 {
-        font-size: 1.8rem;
-        margin-bottom: 25px;
+        font-size: 1.7rem;
+        margin-bottom: 20px;
     }
     
     .contact-form {
-        padding: 20px;
+        padding: 24px 20px;
+    }
+    
+    .contact-form h3 {
+        font-size: 1.2rem;
     }
     
     .form-group input,
@@ -480,7 +561,11 @@ img {
 
 @media (max-width: 768px) {
     footer {
-        padding: 40px 0 20px;
+        padding: 50px 0 24px;
+    }
+    
+    footer .container {
+        padding: 0 20px;
     }
     
     .footer-content {
@@ -521,17 +606,27 @@ img {
 }
 
 @media (max-width: 576px) {
+    footer {
+        padding: 40px 0 20px;
+    }
+    
     .footer-bottom {
         flex-direction: column;
+        padding-top: 16px;
     }
     
     .footer-bottom p {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
+        font-size: 0.85rem;
     }
     
     .footer-bottom-links {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+    }
+    
+    .footer-logo .logo-img {
+        height: 50px;
     }
 }
 
