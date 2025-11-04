@@ -686,10 +686,10 @@ function toggleWhy(item) {
                 const closeBtn = document.createElement('div');
                 closeBtn.className = 'why-dropdown-close';
                 closeBtn.innerHTML = '&times;';
-                closeBtn.onclick = (e) => {
+                closeBtn.addEventListener('click', (e) => {
                     e.stopPropagation();
                     closeAllWhy();
-                };
+                });
                 dropdown.insertBefore(closeBtn, dropdown.firstChild);
             }
         }

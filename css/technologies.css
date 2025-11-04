@@ -433,6 +433,21 @@
     transition: all 0.3s ease;
     align-items: center;
     justify-content: center;
+    z-index: 101;
+}
+
+.why-dropdown-close:hover {
+    background: rgba(16, 128, 240, 0.3);
+    border-color: #1080f0;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .why-dropdown-close {
+        display: flex;
+    }
+}: center;
+    justify-content: center;
     z-index: 102;
 }
 
