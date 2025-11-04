@@ -93,10 +93,10 @@
 
 /* Why Us Section - Modern Responsive Layout */
 #why-work-with-us {
-    padding: 60px 0;
+    padding: 60px 0 400px 0;
     background-color: #000000;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 #why-work-with-us::before {
@@ -287,7 +287,7 @@
 /* Mobile View - Vertical Stack */
 @media (max-width: 768px) {
     #why-work-with-us {
-        padding: 50px 0;
+        padding: 50px 0 300px 0;
     }
     
     #why-work-with-us h2 {
@@ -336,7 +336,7 @@
 /* Small Mobile - Single Column */
 @media (max-width: 576px) {
     #why-work-with-us {
-        padding: 40px 0;
+        padding: 40px 0 250px 0;
     }
     
     #why-work-with-us h2 {
