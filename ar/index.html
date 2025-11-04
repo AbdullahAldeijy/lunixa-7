@@ -144,102 +144,70 @@
     <section id="services">
         <div class="container">
             <h2>خدماتنا</h2>
-            
-            <div class="service-category">
-                <h3 class="category-title">الخدمات المهنية</h3>
-                <div class="services-grid">
-                    <div class="service-card expandable" onclick="toggleService(this)">
-                        <h4>الهجرة إلى السحابة <i class="fas fa-chevron-down"></i></h4>
-                        <div class="service-details">
-                            <ul>
-                                <li>تقييم الهجرة إلى السحابة</li>
-                                <li>دراسة جدوى الهجرة</li>
-                                <li>تخطيط الهجرة</li>
-                                <li>استراتيجيات الهجرة</li>
-                                <li>تنفيذ الهجرة</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-card expandable" onclick="toggleService(this)">
-                        <h4>تحديث التطبيقات <i class="fas fa-chevron-down"></i></h4>
-                        <div class="service-details">
-                            <ul>
-                                <li>بنية متعددة الخدمات</li>
-                                <li>DevOps</li>
-                                <li>DevSecOps</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-card expandable" onclick="toggleService(this)">
-                        <h4>إدارة تكاليف السحابة <i class="fas fa-chevron-down"></i></h4>
-                        <div class="service-details">
-                            <ul>
-                                <li>أداة Cloud FinOps</li>
-                                <li>خدمة FinOps مُدارة</li>
-                                <li>خبراء اقتصاديات السحابة</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-card expandable" onclick="toggleService(this)">
-                        <h4>خدمات السحابة المتعددة المُدارة <i class="fas fa-chevron-down"></i></h4>
-                        <div class="service-details">
-                            <ul>
-                                <li>مركز عمليات سحابية محلي 24x7</li>
-                                <li>خدمات المراقبة المُدارة</li>
-                                <li>خدمات التشغيل المُدارة</li>
-                                <li>استمرارية الأعمال / استعادة الكوارث</li>
-                                <li>خدمة قواعد البيانات المُدارة</li>
-                                <li>النسخ الاحتياطي المُدار</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-card expandable" onclick="toggleService(this)">
-                        <h4>أمن السحابة <i class="fas fa-chevron-down"></i></h4>
-                        <div class="service-details">
-                            <ul>
-                                <li>مركز عمليات أمنية محلي 24x7</li>
-                                <li>التصميم والبنية</li>
-                                <li>الحوكمة والامتثال</li>
-                                <li>أمن بيئة العمل الحديثة</li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="services-grid-modern">
+                <div class="service-card-modern" onclick="openServiceModal('migration')">
+                    <div class="service-icon-modern"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <h3>الهجرة إلى السحابة</h3>
+                    <p>انتقال سلس إلى السحابة مع تقييم وتخطيط واستراتيجيات تنفيذ شاملة.</p>
+                </div>
+                <div class="service-card-modern" onclick="openServiceModal('modernization')">
+                    <div class="service-icon-modern"><i class="fas fa-code-branch"></i></div>
+                    <h3>تحديث التطبيقات</h3>
+                    <p>تحويل التطبيقات القديمة بهياكل حديثة وممارسات DevOps و DevSecOps.</p>
+                </div>
+                <div class="service-card-modern" onclick="openServiceModal('cost')">
+                    <div class="service-icon-modern"><i class="fas fa-dollar-sign"></i></div>
+                    <h3>إدارة تكاليف السحابة</h3>
+                    <p>تحسين الإنفاق السحابي بأدوات FinOps والخدمات المُدارة والإرشاد الخبير.</p>
+                </div>
+                <div class="service-card-modern" onclick="openServiceModal('multicloud')">
+                    <div class="service-icon-modern"><i class="fas fa-server"></i></div>
+                    <h3>خدمات السحابة المتعددة المُدارة</h3>
+                    <p>عمليات سحابية على مدار الساعة مع خدمات المراقبة والإدارة واستعادة الكوارث.</p>
+                </div>
+                <div class="service-card-modern" onclick="openServiceModal('security')">
+                    <div class="service-icon-modern"><i class="fas fa-shield-alt"></i></div>
+                    <h3>أمن السحابة</h3>
+                    <p>أمان شامل مع مركز عمليات أمنية 24/7 والحوكمة والامتثال وحماية بيئة العمل الحديثة.</p>
+                </div>
+                <div class="service-card-modern" onclick="openServiceModal('managedmulti')">
+                    <div class="service-icon-modern"><i class="fas fa-cloud"></i></div>
+                    <h3>إدارة السحابة المتعددة</h3>
+                    <p>إدارة شاملة لبيئة السحابة المتعددة عبر جميع المنصات.</p>
+                </div>
+                <div class="service-card-modern" onclick="openServiceModal('workspace')">
+                    <div class="service-icon-modern"><i class="fas fa-briefcase"></i></div>
+                    <h3>إدارة Google Workspace</h3>
+                    <p>إدارة كاملة لـ Google Workspace لتحقيق أقصى إنتاجية للفريق.</p>
+                </div>
+                <div class="service-card-modern" onclick="openServiceModal('m365')">
+                    <div class="service-icon-modern"><i class="fas fa-windows"></i></div>
+                    <h3>إدارة M365</h3>
+                    <p>خدمات إدارة Microsoft 365 الكاملة لضمان أقصى إنتاجية وأمان.</p>
+                </div>
+                <div class="service-card-modern" onclick="openServiceModal('finops')">
+                    <div class="service-icon-modern"><i class="fas fa-chart-pie"></i></div>
+                    <h3>إدارة FinOps</h3>
+                    <p>إدارة مستمرة للعمليات المالية لتحسين تكاليف السحابة بشكل مستمر.</p>
                 </div>
             </div>
             
-            <div class="service-category">
-                <h3 class="category-title">الخدمات المُدارة</h3>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h4>إدارة السحابة المتعددة</h4>
-                        <p>إدارة شاملة لبيئة السحابة المتعددة الخاصة بك، مما يضمن الأداء الأمثل والأمان وكفاءة التكلفة عبر جميع المنصات.</p>
-                    </div>
-                    <div class="service-card">
-                        <h4>إدارة Google Workspace</h4>
-                        <p>إدارة كاملة لبيئة Google Workspace الخاصة بك، من النشر والتكوين إلى الأمان والتحسين المستمر لضمان أقصى إنتاجية لفرقك.</p>
-                    </div>
-                    <div class="service-card">
-                        <h4>إدارة M365</h4>
-                        <p>خدمات إدارة Microsoft 365 الكاملة، من النشر إلى التحسين المستمر، مما يضمن أقصى إنتاجية وأمان.</p>
-                    </div>
-                    <div class="service-card">
-                        <h4>إدارة العمليات المالية</h4>
-                        <p>إدارة مستمرة للعمليات المالية لمراقبة وتحليل وتحسين تكاليف السحابة واستخدام الموارد بشكل مستمر.</p>
-                    </div>
-                </div>
-                
-                <div class="coc-banner">
-                    <div class="coc-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <div class="coc-content">
-                        <h4>مركز عمليات السحابة</h4>
-                        <p><span class="coc-highlight">24x7</span> - مراكز عمليات سحابية تقدم لعملائنا خدمات السحابة المُدارة</p>
-                    </div>
+            <div class="coc-banner">
+                <div class="coc-icon"><i class="fas fa-headset"></i></div>
+                <div class="coc-content">
+                    <h4>مركز عمليات السحابة</h4>
+                    <p><span class="coc-highlight">24x7</span> - مراكز عمليات سحابية تقدم لعملائنا خدمات السحابة المُدارة</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <div id="serviceModal" class="service-modal">
+        <div class="service-modal-content">
+            <span class="service-modal-close" onclick="closeServiceModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
 
 
 
@@ -565,9 +533,60 @@
     <script src="../js/hero-mouse.js"></script>
     <script src="../js/contact-form.js"></script>
     <script>
-function toggleService(card) {
-    card.classList.toggle('active');
+const serviceData = {
+    migration: {
+        title: 'الهجرة إلى السحابة',
+        items: ['تقييم الهجرة إلى السحابة', 'دراسة جدوى الهجرة', 'تخطيط الهجرة', 'استراتيجيات الهجرة', 'تنفيذ الهجرة']
+    },
+    modernization: {
+        title: 'تحديث التطبيقات',
+        items: ['بنية متعددة الخدمات', 'تطبيق DevOps', 'تكامل DevSecOps']
+    },
+    cost: {
+        title: 'إدارة تكاليف السحابة',
+        items: ['أداة Cloud FinOps', 'خدمة FinOps مُدارة', 'خبراء اقتصاديات السحابة']
+    },
+    multicloud: {
+        title: 'خدمات السحابة المتعددة المُدارة',
+        items: ['مركز عمليات سحابية محلي 24x7', 'خدمات المراقبة المُدارة', 'خدمات التشغيل المُدارة', 'استمرارية الأعمال / استعادة الكوارث', 'خدمة قواعد البيانات المُدارة', 'النسخ الاحتياطي المُدار']
+    },
+    security: {
+        title: 'أمن السحابة',
+        items: ['مركز عمليات أمنية محلي 24x7', 'التصميم والبنية', 'الحوكمة والامتثال', 'أمن بيئة العمل الحديثة']
+    },
+    managedmulti: {
+        title: 'إدارة السحابة المتعددة',
+        items: ['إدارة شاملة لبيئة السحابة المتعددة', 'أداء أمثل عبر جميع المنصات', 'الأمان وكفاءة التكلفة', 'التكامل عبر المنصات']
+    },
+    workspace: {
+        title: 'إدارة Google Workspace',
+        items: ['إدارة كاملة لـ Google Workspace', 'النشر والتكوين', 'الأمان والتحسين المستمر', 'أقصى إنتاجية للفريق']
+    },
+    m365: {
+        title: 'إدارة M365',
+        items: ['إدارة كاملة لـ Microsoft 365', 'من النشر إلى التحسين المستمر', 'أقصى إنتاجية وأمان', 'تدريب ودعم المستخدمين']
+    },
+    finops: {
+        title: 'إدارة FinOps',
+        items: ['مراقبة مستمرة للتكاليف', 'تحليل وتحسين تكاليف السحابة', 'إدارة استخدام الموارد', 'تعظيم العائد على الاستثمار']
+    }
+};
+
+function openServiceModal(service) {
+    const data = serviceData[service];
+    const modal = document.getElementById('serviceModal');
+    const content = document.getElementById('modalContent');
+    content.innerHTML = `<h3>${data.title}</h3><ul>${data.items.map(item => `<li>${item}</li>`).join('')}</ul>`;
+    modal.classList.add('active');
 }
+
+function closeServiceModal() {
+    document.getElementById('serviceModal').classList.remove('active');
+}
+
+document.getElementById('serviceModal').addEventListener('click', function(e) {
+    if (e.target === this) closeServiceModal();
+});
 
 function toggleWhy(item) {
     if (window.innerWidth <= 768) {

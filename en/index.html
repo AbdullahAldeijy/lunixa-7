@@ -217,102 +217,70 @@
     <section id="services">
         <div class="container">
             <h2>Our Services</h2>
-            
-            <div class="service-category">
-                <h3 class="category-title">Professional Services</h3>
-                <div class="services-grid">
-                    <div class="service-card expandable" onclick="toggleService(this)">
-                        <h4>Cloud Migration <i class="fas fa-chevron-down"></i></h4>
-                        <div class="service-details">
-                            <ul>
-                                <li>Cloud Migration Assessment</li>
-                                <li>Migration Business Case</li>
-                                <li>Migration Planning</li>
-                                <li>Migration Strategies</li>
-                                <li>Migration Execution</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-card expandable" onclick="toggleService(this)">
-                        <h4>Application Modernization <i class="fas fa-chevron-down"></i></h4>
-                        <div class="service-details">
-                            <ul>
-                                <li>Multi-Service Architecture</li>
-                                <li>DevOps</li>
-                                <li>DevSecOps</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-card expandable" onclick="toggleService(this)">
-                        <h4>Cloud Cost Management <i class="fas fa-chevron-down"></i></h4>
-                        <div class="service-details">
-                            <ul>
-                                <li>Cloud FinOps Tool</li>
-                                <li>Managed FinOps Service</li>
-                                <li>Cloud Economics Experts</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-card expandable" onclick="toggleService(this)">
-                        <h4>Multi Cloud Managed Services <i class="fas fa-chevron-down"></i></h4>
-                        <div class="service-details">
-                            <ul>
-                                <li>24 x 7 Local Cloud Operations Center</li>
-                                <li>Managed Monitoring Services</li>
-                                <li>Managed Operation Services</li>
-                                <li>Business Continuity/ Disaster Recovery</li>
-                                <li>Managed Database Service</li>
-                                <li>Managed Backup</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-card expandable" onclick="toggleService(this)">
-                        <h4>Cloud Security <i class="fas fa-chevron-down"></i></h4>
-                        <div class="service-details">
-                            <ul>
-                                <li>24 x 7 Local Security Operations Center</li>
-                                <li>Design and Architecture</li>
-                                <li>Governance & Compliances</li>
-                                <li>Modern Workplace Security</li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="services-grid-modern">
+                <div class="service-card-modern" onclick="openServiceModal('migration')">
+                    <div class="service-icon-modern"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <h3>Cloud Migration</h3>
+                    <p>Seamless transition to the cloud with comprehensive assessment, planning, and execution strategies.</p>
+                </div>
+                <div class="service-card-modern" onclick="openServiceModal('modernization')">
+                    <div class="service-icon-modern"><i class="fas fa-code-branch"></i></div>
+                    <h3>Application Modernization</h3>
+                    <p>Transform legacy applications with modern architectures, DevOps, and DevSecOps practices.</p>
+                </div>
+                <div class="service-card-modern" onclick="openServiceModal('cost')">
+                    <div class="service-icon-modern"><i class="fas fa-dollar-sign"></i></div>
+                    <h3>Cloud Cost Management</h3>
+                    <p>Optimize cloud spending with FinOps tools, managed services, and expert guidance.</p>
+                </div>
+                <div class="service-card-modern" onclick="openServiceModal('multicloud')">
+                    <div class="service-icon-modern"><i class="fas fa-server"></i></div>
+                    <h3>Multi Cloud Managed Services</h3>
+                    <p>24/7 cloud operations with monitoring, management, and disaster recovery services.</p>
+                </div>
+                <div class="service-card-modern" onclick="openServiceModal('security')">
+                    <div class="service-icon-modern"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Cloud Security</h3>
+                    <p>Comprehensive security with 24/7 SOC, governance, compliance, and modern workplace protection.</p>
+                </div>
+                <div class="service-card-modern" onclick="openServiceModal('managedmulti')">
+                    <div class="service-icon-modern"><i class="fas fa-cloud"></i></div>
+                    <h3>Managed Multi Cloud</h3>
+                    <p>Comprehensive management of your multi-cloud environment across all platforms.</p>
+                </div>
+                <div class="service-card-modern" onclick="openServiceModal('workspace')">
+                    <div class="service-icon-modern"><i class="fas fa-briefcase"></i></div>
+                    <h3>Managed Google Workspace</h3>
+                    <p>Complete management of Google Workspace for maximum team productivity.</p>
+                </div>
+                <div class="service-card-modern" onclick="openServiceModal('m365')">
+                    <div class="service-icon-modern"><i class="fas fa-windows"></i></div>
+                    <h3>Managed M365</h3>
+                    <p>Full Microsoft 365 management services ensuring maximum productivity and security.</p>
+                </div>
+                <div class="service-card-modern" onclick="openServiceModal('finops')">
+                    <div class="service-icon-modern"><i class="fas fa-chart-pie"></i></div>
+                    <h3>Managed FinOps</h3>
+                    <p>Ongoing financial operations management to optimize your cloud costs continuously.</p>
                 </div>
             </div>
             
-            <div class="service-category">
-                <h3 class="category-title">Managed Services</h3>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h4>Managed Multi Cloud</h4>
-                        <p>Comprehensive management of your multi-cloud environment, ensuring optimal performance, security, and cost efficiency across all platforms.</p>
-                    </div>
-                    <div class="service-card">
-                        <h4>Managed Google Workspace</h4>
-                        <p>Complete management of your Google Workspace environment, from deployment and configuration to security and ongoing optimization for maximum team productivity.</p>
-                    </div>
-                    <div class="service-card">
-                        <h4>Managed M365</h4>
-                        <p>Full Microsoft 365 management services, from deployment to ongoing optimization, ensuring maximum productivity and security.</p>
-                    </div>
-                    <div class="service-card">
-                        <h4>Managed FinOps</h4>
-                        <p>Ongoing financial operations management to continuously monitor, analyze, and optimize your cloud costs and resource utilization.</p>
-                    </div>
-                </div>
-                
-                <div class="coc-banner">
-                    <div class="coc-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <div class="coc-content">
-                        <h4>Cloud Operation Center</h4>
-                        <p><span class="coc-highlight">24x7</span> - Cloud Operations Centers Offering our Customers Cloud Managed Services</p>
-                    </div>
+            <div class="coc-banner">
+                <div class="coc-icon"><i class="fas fa-headset"></i></div>
+                <div class="coc-content">
+                    <h4>Cloud Operation Center</h4>
+                    <p><span class="coc-highlight">24x7</span> - Cloud Operations Centers Offering our Customers Cloud Managed Services</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <div id="serviceModal" class="service-modal">
+        <div class="service-modal-content">
+            <span class="service-modal-close" onclick="closeServiceModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
 
 
 
@@ -642,9 +610,48 @@
     <script src="../js/contact-form.js"></script>
     <!-- Removed tech-circles.js as it's no longer needed with the new grid layout -->
     <script>
-function toggleService(card) {
-    card.classList.toggle('active');
+const serviceData = {
+    migration: {
+        title: 'Cloud Migration',
+        items: ['Cloud Migration Assessment', 'Migration Business Case', 'Migration Planning', 'Migration Strategies', 'Migration Execution']
+    },
+    modernization: {
+        title: 'Application Modernization',
+        items: ['Multi-Service Architecture', 'DevOps Implementation', 'DevSecOps Integration']
+    },
+    cost: {
+        title: 'Cloud Cost Management',
+        items: ['Cloud FinOps Tool', 'Managed FinOps Service', 'Cloud Economics Experts']
+    },
+    managed: {
+        title: 'Multi Cloud Managed Services',
+        items: ['24x7 Local Cloud Operations Center', 'Managed Monitoring Services', 'Managed Operation Services', 'Business Continuity / Disaster Recovery', 'Managed Database Service', 'Managed Backup']
+    },
+    security: {
+        title: 'Cloud Security',
+        items: ['24x7 Local Security Operations Center', 'Design and Architecture', 'Governance & Compliances', 'Modern Workplace Security']
+    },
+    workspace: {
+        title: 'Managed Workspace',
+        items: ['Managed Google Workspace', 'Managed Microsoft 365', 'Deployment and Configuration', 'Security and Optimization']
+    }
+};
+
+function openServiceModal(service) {
+    const data = serviceData[service];
+    const modal = document.getElementById('serviceModal');
+    const content = document.getElementById('modalContent');
+    content.innerHTML = `<h3>${data.title}</h3><ul>${data.items.map(item => `<li>${item}</li>`).join('')}</ul>`;
+    modal.classList.add('active');
 }
+
+function closeServiceModal() {
+    document.getElementById('serviceModal').classList.remove('active');
+}
+
+document.getElementById('serviceModal').addEventListener('click', function(e) {
+    if (e.target === this) closeServiceModal();
+});
 
 function toggleWhy(item) {
     if (window.innerWidth <= 768) {
