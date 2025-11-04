@@ -431,56 +431,96 @@
 <section id="why-work-with-us">
   <div class="container">
     <h2>Why LUNIXA CLOUD SOLUTIONS</h2>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-number">1</div>
-        <h3>Professional Local Experts</h3>
-        <ul class="why-features">
-          <li>Deep understanding of Local Market and Regulations</li>
-          <li>Certified Cloud Experts and Digital Transformation Consultants</li>
-          <li>Hands-on support and customized solutions</li>
-          <li>Committed to the success of our local community</li>
-        </ul>
+    <div class="why-horizontal">
+      <div class="why-item" onclick="toggleWhy(this)">
+        <div class="why-icon-box">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="why-title">Local Experts</div>
+        <div class="why-dropdown">
+          <h4>Professional Local Experts</h4>
+          <ul>
+            <li>Deep understanding of Local Market and Regulations</li>
+            <li>Certified Cloud Experts and Digital Transformation Consultants</li>
+            <li>Hands-on support and customized solutions</li>
+            <li>Committed to the success of our local community</li>
+          </ul>
+        </div>
       </div>
-      <div class="why-card">
-        <div class="why-number">2</div>
-        <h3>Digital Transformation Visionaries</h3>
-        <ul class="why-features">
-          <li>We deliver innovative and agile approaches to digital transformation</li>
-          <li>Our focus is on achieving operational excellence for your business</li>
-          <li>We provide tailored solutions designed for long-term growth</li>
-          <li>We are driving innovation and setting new standards in the cloud space</li>
-        </ul>
+      <div class="why-item" onclick="toggleWhy(this)">
+        <div class="why-icon-box">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <div class="why-title">Digital Transformation</div>
+        <div class="why-dropdown">
+          <h4>Digital Transformation Visionaries</h4>
+          <ul>
+            <li>We deliver innovative and agile approaches to digital transformation</li>
+            <li>Our focus is on achieving operational excellence for your business</li>
+            <li>We provide tailored solutions designed for long-term growth</li>
+            <li>We are driving innovation and setting new standards in the cloud space</li>
+          </ul>
+        </div>
       </div>
-      <div class="why-card">
-        <div class="why-number">3</div>
-        <h3>Full Stack Managed Services</h3>
-        <ul class="why-features">
-          <li>Comprehensive cloud migration services</li>
-          <li>Seamless data and application transition</li>
-          <li>End-to-end cloud infrastructure management</li>
-          <li>24/7 dedicated support and monitoring</li>
-        </ul>
+      <div class="why-item" onclick="toggleWhy(this)">
+        <div class="why-icon-box">
+          <i class="fas fa-server"></i>
+        </div>
+        <div class="why-title">Managed Services</div>
+        <div class="why-dropdown">
+          <h4>Full Stack Managed Services</h4>
+          <ul>
+            <li>Comprehensive cloud migration services</li>
+            <li>Seamless data and application transition</li>
+            <li>End-to-end cloud infrastructure management</li>
+            <li>24/7 dedicated support and monitoring</li>
+          </ul>
+        </div>
       </div>
-      <div class="why-card">
-        <div class="why-number">4</div>
-        <h3>Region Reach</h3>
-        <ul class="why-features">
-          <li>Strategic presence in the region's key markets</li>
-          <li>Partnerships with global cloud and solutions leaders</li>
-          <li>Enabling global expansion for our clients</li>
-          <li>Delivering world-class solutions globally</li>
-        </ul>
+      <div class="why-item" onclick="toggleWhy(this)">
+        <div class="why-icon-box">
+          <i class="fas fa-globe"></i>
+        </div>
+        <div class="why-title">Region Reach</div>
+        <div class="why-dropdown">
+          <h4>Region Reach</h4>
+          <ul>
+            <li>Strategic presence in the region's key markets</li>
+            <li>Partnerships with global cloud and solutions leaders</li>
+            <li>Enabling global expansion for our clients</li>
+            <li>Delivering world-class solutions globally</li>
+          </ul>
+        </div>
       </div>
-      <div class="why-card">
-        <div class="why-number">5</div>
-        <h3>Cloud Cost Experts</h3>
-        <ul class="why-features">
-          <li>Continuous cost management and monitoring</li>
-          <li>Proactive cost optimization strategies</li>
-          <li>Expertise in FinOps practices and methodologies</li>
-          <li>Maximizing ROI on your cloud investments</li>
-        </ul>
+      <div class="why-item" onclick="toggleWhy(this)">
+        <div class="why-icon-box">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="why-title">Cost Experts</div>
+        <div class="why-dropdown">
+          <h4>Cloud Cost Experts</h4>
+          <ul>
+            <li>Continuous cost management and monitoring</li>
+            <li>Proactive cost optimization strategies</li>
+            <li>Expertise in FinOps practices and methodologies</li>
+            <li>Maximizing ROI on your cloud investments</li>
+          </ul>
+        </div>
+      </div>
+      <div class="why-item" onclick="toggleWhy(this)">
+        <div class="why-icon-box">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="why-title">Security First</div>
+        <div class="why-dropdown">
+          <h4>Security & Compliance</h4>
+          <ul>
+            <li>24/7 Security Operations Center</li>
+            <li>Advanced threat detection and response</li>
+            <li>Compliance with regional and international standards</li>
+            <li>Proactive security monitoring and management</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -605,6 +645,21 @@
 function toggleService(card) {
     card.classList.toggle('active');
 }
+
+function toggleWhy(item) {
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll('.why-item').forEach(el => {
+            if (el !== item) el.classList.remove('active');
+        });
+        item.classList.toggle('active');
+    }
+}
+
+document.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768 && !e.target.closest('.why-item')) {
+        document.querySelectorAll('.why-item').forEach(el => el.classList.remove('active'));
+    }
+});
     </script>
     <script>
 // --- Loading overlay for new users only ---
