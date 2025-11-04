@@ -78,17 +78,60 @@ function initStickyHeader() {
 
 // Mobile Menu Toggle
 function initMobileMenu() {
-    // Always hide the hamburger menu on mobile
-    function hideMenuToggleOnMobile() {
-        if (window.innerWidth <= 900) {
-            menuToggle.style.display = 'none';
-        } else {
-            menuToggle.style.display = '';
+    if (!menuToggle) return;
+    
+    const nav = document.querySelector('nav');
+    if (!nav) return;
+    
+    // Create backdrop
+    let backdrop = document.querySelector('.nav-backdrop');
+    if (!backdrop) {
+        backdrop = document.createElement('div');
+        backdrop.className = 'nav-backdrop';
+        document.body.appendChild(backdrop);
+    }
+    
+    function toggleMenu() {
+        nav.classList.toggle('active');
+        backdrop.classList.toggle('active');
+        document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+        
+        // Toggle icon
+        const icon = menuToggle.querySelector('i');
+        if (icon) {
+            if (nav.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         }
     }
-    hideMenuToggleOnMobile();
-    window.addEventListener('resize', hideMenuToggleOnMobile);
-    // No click handler needed since the menu toggle is hidden on mobile
+    
+    function closeMenu() {
+        nav.classList.remove('active');
+        backdrop.classList.remove('active');
+        document.body.style.overflow = '';
+        const icon = menuToggle.querySelector('i');
+        if (icon) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    }
+    
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMenu();
+    });
+    
+    // Close menu when clicking backdrop
+    backdrop.addEventListener('click', closeMenu);
+    
+    // Close menu when clicking on a link
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
 }
 
 // Create particles for logo background

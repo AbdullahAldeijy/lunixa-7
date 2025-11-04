@@ -105,15 +105,26 @@ img {
 
 @media (max-width: 768px) {
     header {
-        padding: 12px 0;
+        padding: 10px 0;
+        display: block !important;
+        visibility: visible !important;
     }
     
     header .container {
-        padding: 0 16px;
+        padding: 8px 16px;
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo-container {
+        display: flex !important;
+        align-items: center;
     }
     
     .logo-img {
-        height: 42px;
+        height: 40px;
+        display: block !important;
     }
     
     .company-names {
@@ -136,34 +147,47 @@ img {
     
     /* Mobile Menu */
     .menu-toggle {
-        display: block;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
         font-size: 1.5rem;
         color: white;
         cursor: pointer;
         z-index: 1001;
+        width: 40px;
+        height: 40px;
+        background: rgba(16, 128, 240, 0.1);
+        border-radius: 8px;
+        border: 1px solid rgba(16, 128, 240, 0.3);
     }
     
     nav {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 80%;
-        max-width: 300px;
+        width: 75%;
+        max-width: 280px;
         height: 100vh;
-        background-color: var(--secondary-color);
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.98) 0%, rgba(26, 26, 26, 0.98) 100%);
+        backdrop-filter: blur(20px);
         z-index: 1000;
-        transition: right 0.3s ease;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 50px 0;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 80px 0 30px;
+        border-left: 1px solid rgba(16, 128, 240, 0.3);
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
     }
     
     html[dir="rtl"] nav {
         right: auto;
         left: -100%;
-        transition: left 0.3s ease;
+        transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-left: none;
+        border-right: 1px solid rgba(16, 128, 240, 0.3);
+        box-shadow: 5px 0 30px rgba(0, 0, 0, 0.5);
     }
     
     nav.active {
@@ -175,28 +199,124 @@ img {
     }
     
     nav ul {
-        flex-direction: column;
+        flex-direction: column !important;
         width: 100%;
+        gap: 0 !important;
+        padding: 0;
+        display: flex !important;
     }
     
     nav ul li {
-        margin: 15px 0;
+        margin: 0 !important;
         width: 100%;
-        text-align: center;
+        display: block !important;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
     
     html[dir="rtl"] nav ul li {
-        margin: 15px 0;
+        margin: 0 !important;
+        text-align: right;
+    }
+    
+    nav ul li:first-child {
+        border-top: none;
+    }
+    
+    nav ul li:last-child {
+        border-bottom: none;
     }
     
     nav ul li a {
-        display: block;
-        padding: 10px;
-        font-size: 1.2rem;
+        display: block !important;
+        width: 100%;
+        padding: 20px 24px !important;
+        font-size: 1.05rem !important;
+        font-weight: 500;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        transition: all 0.3s ease;
+        color: #ffffff;
+        text-decoration: none;
+        text-align: left;
+    }
+    
+    html[dir="rtl"] nav ul li a {
+        text-align: right;
+    }
+    
+    nav ul li a:hover,
+    nav ul li a:active {
+        background: rgba(16, 128, 240, 0.2);
+        color: #1080f0;
+        padding-left: 32px;
+    }
+    
+    html[dir="rtl"] nav ul li a:hover,
+    html[dir="rtl"] nav ul li a:active {
+        padding-left: 24px;
+        padding-right: 32px;
+    }
+    
+    .book-consultation-btn {
+        background: linear-gradient(135deg, #1080f0 0%, #0066cc 100%) !important;
+        color: white !important;
+        margin: 8px 16px !important;
+        border-radius: 8px !important;
+        padding: 14px 24px !important;
+        text-align: center;
+        border: none !important;
+    }
+    
+    .book-consultation-btn:hover {
+        background: linear-gradient(135deg, #0066cc 0%, #1080f0 100%) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(16, 128, 240, 0.4);
+        padding-left: 24px !important;
     }
     
     .language-selector {
-        margin: 20px 0 0;
+        margin: auto 24px 0;
+        display: block !important;
+        text-align: left;
+    }
+    
+    html[dir="rtl"] .language-selector {
+        text-align: right;
+    }
+    
+    .language-selector .language-link {
+        display: inline-block;
+        padding: 10px 20px;
+        background: rgba(16, 128, 240, 0.2);
+        border: 1px solid rgba(16, 128, 240, 0.4);
+        border-radius: 8px;
+    }
+}
+
+/* Mobile Menu Backdrop */
+.nav-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(2px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-backdrop.active {
+    display: block;
+    opacity: 1;
+}
+
+@media (min-width: 769px) {
+    .nav-backdrop {
+        display: none !important;
     }
 }
 
@@ -250,8 +370,26 @@ img {
 }
 
 @media (max-width: 576px) {
+    header {
+        padding: 8px 0;
+    }
+    
+    header .container {
+        padding: 6px 12px;
+    }
+    
+    .logo-img {
+        height: 36px;
+    }
+    
+    .menu-toggle {
+        width: 36px;
+        height: 36px;
+        font-size: 1.3rem;
+    }
+    
     #hero {
-        padding: 90px 0 40px;
+        padding: 80px 0 40px;
     }
     
     .hero-content h1 {
