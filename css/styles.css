@@ -143,7 +143,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.95);
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
     backdrop-filter: blur(20px) saturate(180%);
     box-shadow: 0 2px 15px rgba(16, 128, 240, 0.2);
     z-index: 1000;
@@ -229,7 +229,7 @@ html[dir="rtl"] .company-names {
 .company-name {
     font-weight: 700;
     font-size: 0.8rem;
-    color: var(--secondary-color);
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     line-height: 1.1;
