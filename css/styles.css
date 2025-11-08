@@ -432,11 +432,11 @@ nav ul li a:hover {
     margin: 0 auto;
     z-index: 2;
     position: relative;
-    padding: 0 20px;
+    padding: 20px 20px;
 }
 
 .hero-content h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-bottom: 24px;
     font-weight: 800;
     background: linear-gradient(135deg, #ffffff 0%, #1080f0 100%);
@@ -446,7 +446,8 @@ nav ul li a:hover {
     animation: fadeInDown 1s ease-out forwards;
     opacity: 0;
     letter-spacing: -0.02em;
-    line-height: 1.1;
+    line-height: 1.5;
+    padding: 10px 0;
 }
 
 .hero-content p {
@@ -488,7 +489,9 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        line-height: 1.6;
+        padding: 15px 0;
     }
     
     .hero-content p {
