@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lunixa Cloud Solutions - Cloud Migration & Managed Services Saudi Arabia</title>
     <meta name="description" content="Professional cloud solutions in Riyadh, KSA. 24/7 Cloud Operations Center, AWS & Google Cloud experts, FinOps, security, and digital transformation services.">
+    <meta name="keywords" content="cloud migration, AWS, Google Cloud, managed services, DevOps, FinOps, cloud security, Saudi Arabia, Riyadh, digital transformation">
+    <meta name="author" content="Lunixa Cloud Solutions">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lunixa.sa/en">
+    <link rel="alternate" hreflang="en" href="https://lunixa.sa/en">
+    <link rel="alternate" hreflang="ar" href="https://lunixa.sa/ar">
+    <link rel="alternate" hreflang="x-default" href="https://lunixa.sa">
+    <meta property="og:title" content="Lunixa Cloud Solutions - Cloud Migration & Managed Services Saudi Arabia">
+    <meta property="og:description" content="Professional cloud solutions in Riyadh, KSA. 24/7 Cloud Operations Center, AWS & Google Cloud experts, FinOps, security, and digital transformation services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lunixa.sa/en">
+    <meta property="og:image" content="https://lunixa.sa/images/logo9.png">
+    <meta property="og:site_name" content="Lunixa Cloud Solutions">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lunixa Cloud Solutions - Cloud Migration & Managed Services Saudi Arabia">
+    <meta name="twitter:description" content="Professional cloud solutions in Riyadh, KSA. 24/7 Cloud Operations Center, AWS & Google Cloud experts, FinOps, security, and digital transformation services.">
+    <meta name="twitter:image" content="https://lunixa.sa/images/logo9.png">
+    <meta name="twitter:site" content="@lunixacloud">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/logo6.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../images/logo6.png">
     <link rel="apple-touch-icon" href="../images/logo6.png">
@@ -12,8 +31,39 @@
     <link rel="stylesheet" href="../css/technologies.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/modern-tech.css">
+    <link rel="stylesheet" href="../css/posts.css">
+    <link rel="stylesheet" href="../css/leadership.css">
     <!-- <link rel="stylesheet" href="../css/scs-loading.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Lunixa Cloud Solutions",
+        "alternateName": "لونيكسا للحلول السحابية",
+        "url": "https://lunixa.sa",
+        "logo": "https://lunixa.sa/images/logo9.png",
+        "description": "Professional cloud solutions provider in Saudi Arabia specializing in cloud migration, managed services, DevOps, and digital transformation.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Riyadh",
+            "addressCountry": "SA"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+966534702612",
+            "contactType": "customer service",
+            "email": "team@lunixa.sa"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/lunixacloud",
+            "https://x.com/lunixacloud",
+            "https://www.instagram.com/lunixacloud/"
+        ],
+        "areaServed": ["Saudi Arabia", "Kuwait", "Oman", "Bahrain", "Qatar", "UAE"],
+        "serviceType": ["Cloud Migration", "Managed Services", "DevOps", "Cloud Security", "FinOps"]
+    }
+    </script>
     <script>
         // Check for language switch flag before loading any scripts
         if (sessionStorage.getItem('language-switch') === 'true') {
@@ -170,7 +220,7 @@
     <header>
         <div class="container">
             <div class="logo-container" id="logo-container" style="cursor:pointer;">
-                <img src="../images/logo9.png" alt="Lunixa Cloud Solutions Logo" class="logo-img">
+                <img src="../images/logo9.png" alt="Lunixa Cloud Solutions - Professional Cloud Services Provider in Saudi Arabia" class="logo-img">
                 <div class="header-content">
                     <div class="company-names">
                         <div class="company-name">
@@ -186,9 +236,9 @@
                     </div>
                 </div>
             </div>
-            <nav>
+            <nav role="navigation" aria-label="Main navigation">
                 <ul>
-                    <li><a href="#home" class="home-link">Home</a></li>
+                    <li><a href="#home" class="home-link" aria-label="Go to homepage">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#technologies">Our Partners</a></li>
                     <li><a href="#who-we-are">Who Are We</a></li>
@@ -206,18 +256,20 @@
         </div>
     </header>
     <!-- Loading overlay and related functionality removed -->
-    <section id="hero">
+    <main>
+    <section id="hero" role="banner">
         <div class="container">
             <div class="hero-content">
-                <h1>Elevating Your Digital Horizon</h1>
+                <h1>Elevating Your Digital Horizon with Professional Cloud Solutions</h1>
                 <p>Transforming businesses through innovative cloud solutions</p>
                 <a href="#services" class="btn modern-btn pulse-effect">Explore Our Services</a>
             </div>
         </div>
     </section>
-    <section id="services">
+    </section>
+    <section id="services" role="main">
         <div class="container">
-            <h2>Our Services</h2>
+            <h2>Our Cloud Services & Solutions</h2>
             <div class="services-grid-modern">
                 <div class="service-card-modern" onclick="openServiceModal('migration')">
                     <div class="service-icon-modern"><i class="fas fa-cloud-upload-alt"></i></div>
@@ -290,14 +342,14 @@
             <h2>Our Partners</h2>
             <div class="partners-scroll">
                 <div class="partners-track">
-                    <img src="../images/aws.png" alt="AWS">
-                    <img src="../images/google-cloud.png" alt="Google Cloud">
-                    <img src="../images/google-workspace.png" alt="Google Workspace">
-                    <img src="../images/veeam.png" alt="Veeam">
-                    <img src="../images/acronis.png" alt="Acronis">
-                    <img src="../images/newrelic.png" alt="New Relic">
-                    <img src="../images/datadog.png" alt="Datadog">
-                    <img src="../images/alkiralogo.png" alt="Alkira">
+                    <img src="../images/aws.png" alt="Amazon Web Services (AWS) - Cloud Computing Partner">
+                    <img src="../images/google-cloud.png" alt="Google Cloud Platform - Cloud Infrastructure Partner">
+                    <img src="../images/google-workspace.png" alt="Google Workspace - Productivity Suite Partner">
+                    <img src="../images/veeam.png" alt="Veeam - Backup and Data Protection Partner">
+                    <img src="../images/acronis.png" alt="Acronis - Cyber Protection Partner">
+                    <img src="../images/newrelic.png" alt="New Relic - Application Performance Monitoring Partner">
+                    <img src="../images/datadog.png" alt="Datadog - Cloud Monitoring and Analytics Partner">
+                    <img src="../images/alkiralogo.png" alt="Alkira - Cloud Area Networking Partner">
                     <img src="../images/aws.png" alt="AWS">
                     <img src="../images/google-cloud.png" alt="Google Cloud">
                     <img src="../images/google-workspace.png" alt="Google Workspace">
@@ -313,12 +365,14 @@
     
     <section id="who-we-are">
         <div class="container">
-            <h2>Our Vision</h2>
+            <h2>Our Vision & Mission</h2>
             <div class="who-we-are-content float-animation">
                 <p class="approach-text">Deliver impactful solutions that improve operational efficiency, reduce costs, and save valuable time</p>
             </div>
             
-            <h2 style="margin-top: 50px;">Our Presence</h2>
+
+            
+            <h2 style="margin-top: 50px;">Our Regional Presence</h2>
             <div class="presence-scroll">
                 <div class="presence-track">
                     <img src="../images/saudi.png" alt="Saudi Arabia">
@@ -401,7 +455,7 @@
     
 <section id="why-work-with-us">
   <div class="container">
-    <h2>Why LUNIXA CLOUD SOLUTIONS</h2>
+    <h2>Why Choose Lunixa Cloud Solutions</h2>
     <div class="why-horizontal">
       <div class="why-item" onclick="toggleWhy(this)">
         <div class="why-icon-box">
@@ -497,12 +551,44 @@
   </div>
 </section>
 
-
-
+    <!-- <section id="posts">
+        <div class="container">
+            <h2>Latest Cloud Technology News & Insights</h2>
+            <div class="posts-grid" id="posts-container">
+                <div class="post-card" onclick="openPostModal('cloud-migration-2025', 'en')">
+                    <img src="../images/posts/cloud-migration.png" alt="Cloud Migration Trends in 2025" class="post-image">
+                    <div class="post-content">
+                        <div class="post-date">January 15, 2025</div>
+                        <h3 class="post-title">Cloud Migration Trends in 2025</h3>
+                        <p class="post-excerpt">Discover the latest trends and best practices for migrating to the cloud in 2025, including AI-powered automation and cost optimization strategies.</p>
+                        <a href="#" onclick="event.stopPropagation(); openPostModal('cloud-migration-2025', 'en')" class="post-read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="post-card" onclick="openPostModal('finops-best-practices', 'en')">
+                    <img src="../images/posts/finops.png" alt="FinOps Best Practices for Cost Optimization" class="post-image">
+                    <div class="post-content">
+                        <div class="post-date">January 10, 2025</div>
+                        <h3 class="post-title">FinOps Best Practices for Cost Optimization</h3>
+                        <p class="post-excerpt">Learn how to implement FinOps practices to reduce cloud costs by up to 40% while maintaining performance and reliability.</p>
+                        <a href="#" onclick="event.stopPropagation(); openPostModal('finops-best-practices', 'en')" class="post-read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="post-card" onclick="openPostModal('multi-cloud-security', 'en')">
+                    <img src="../images/posts/security.png" alt="Securing Your Multi-Cloud Environment" class="post-image">
+                    <div class="post-content">
+                        <div class="post-date">January 5, 2025</div>
+                        <h3 class="post-title">Securing Your Multi-Cloud Environment</h3>
+                        <p class="post-excerpt">Essential security strategies for protecting your multi-cloud infrastructure against modern threats and ensuring compliance.</p>
+                        <a href="#" onclick="event.stopPropagation(); openPostModal('multi-cloud-security', 'en')" class="post-read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
     <section id="contact">
         <div class="container">
-            <h2>Get in Touch</h2>
+            <h2>Get in Touch with Our Cloud Experts</h2>
             <div class="contact-container">
                 <div class="contact-form">
                     <h3>Send us a message</h3>
@@ -544,12 +630,13 @@
         </div>
     </section>
 
-    <footer>
+    </main>
+    <footer role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
                     <div class="logo-container footer-logo-container">
-                        <img src="../images/logo9.png" alt="SCS Logo" class="logo-img">
+                        <img src="../images/logo9.png" alt="Lunixa Cloud Solutions Logo" class="logo-img">
                         <div class="header-content">
                             <div class="company-names">
                                 <div class="company-name">
@@ -603,6 +690,14 @@
         </div>
     </footer>
 
+    <!-- Post Modal -->
+    <div id="postModal" class="post-modal">
+        <div class="post-modal-content">
+            <span class="post-modal-close" onclick="closePostModal()">&times;</span>
+            <div id="postModalContent"></div>
+        </div>
+    </div>
+
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/966534702612" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
@@ -611,6 +706,8 @@
     <script src="../js/script.js"></script>
     <script src="../js/hero-mouse.js"></script>
     <script src="../js/contact-form.js"></script>
+    <script src="../js/posts.js"></script>
+    <script src="../js/posts-modal.js"></script>
     <!-- Removed tech-circles.js as it's no longer needed with the new grid layout -->
     <script>
 const serviceData = {

@@ -2645,7 +2645,7 @@ html[dir="rtl"] .btn-subscribe {
     height: 2px;
     background: linear-gradient(90deg, transparent 0%, var(--primary-color) 50%, transparent 100%);
     opacity: 0.6;
-    margin: 0 auto 80px auto;
+    margin: 0 auto 60px auto;
     border: none;
 }
 
